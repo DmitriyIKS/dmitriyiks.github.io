@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en, ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Методы массивов</title>
+  <!-- JQuery da Google -->
+  <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+<h1>Работа с массивоми выталкивание</h1>
+<h2>Метод pop() удаляет последний элемент из массива</h2>
+<p id="tr1"></p>
+<p id="tr2"></p>
+<script>
+var tractora = ["lopata", "dizel", "kamaz", "vaz", "gaz"];
+
+document.getElementById("tr1").innerHTML = tractora.join(" - ");
+
+tractora.pop();
+
+document.getElementById("tr2").innerHTML = "Новый массив: " + tractora.join(" * ");
+</script>
+
+<hr>
+<br><br><br><br>
+
+<h2>Метод push() обавляет новый элемент в массив (в конце)</h2>
+<button onclick="myFunction()">Добавить</button>
+<p id="tr3"></p>
+<script>
+var tractora = ["lopata", "dizel", "kamaz", "vaz", "gaz"];
+
+document.getElementById("tr3").innerHTML = "Первый массив: " + tractora.join(" - ");
+
+function myFunction() {
+tractora.push("bmw")
+document.getElementById("tr3").innerHTML = "Новый массив: " + tractora.toString();
+}
+
+function my2Function() {
+document.getElementById("tr4").innerHTML = "сохраненный массив: " + tractora.toString();
+}
+</script>
+<p id="tr4"></p>
+<button onclick="my2Function()">Сохранить</button>
+
+<hr>
+<br><br><br><br>
+
+<h2>Метод shift() удаляет первый элемент</h2>
+<button onclick="my3Function()">Удалить первый</button> <button onclick="my4Function()">Добавить первый</button>
+<p id="tr5"></p>
+<p id="tr6"></p>
+<p id="tr7"></p>
+<script>
+var tractora = ["lopata", "dizel", "kamaz", "vaz", "gaz"];
+tractora.push("mers", "tele", "fon", "opel")
+
+document.getElementById("tr5").innerHTML = "сохраненный массив: " + tractora.join(" * ");
+
+function my3Function() {
+	document.getElementById("tr6").innerHTML="Последнее слово: " +tractora.shift();
+	document.getElementById("tr5").innerHTML="Новый массив: " +tractora;
+}
+function my4Function() {
+	document.getElementById("tr6").innerHTML="Количество элементов в массиве: " +tractora.unshift("lol", "kek", "che", "burek");
+	document.getElementById("tr5").innerHTML="Новый массив: " +tractora;
+}
+var data = ["app", "opel", "banan"]
+	for (var key in data)
+	document.getElementById("tr5").innerHTML="Новый массив: " +tractora;
+</script>
+
+</body>
+</html>

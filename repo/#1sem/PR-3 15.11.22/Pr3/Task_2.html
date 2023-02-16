@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TASK 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt0"> Введите свою дату рождения: <input class="input-in0" id="date1" type="date" value="12.12.2020"> </div>
+        <br>
+
+        <button onclick="dr()" data-text="Посчитать"></button>
+
+        <div class="put" id="output"></div>
+        <div class="put dr" id="raz"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
+        <script>
+            function dr() {
+            var date0 = new Date(document.getElementById('date1').value);
+            var date1 = document.getElementById('date1').value;
+
+            // This is the birthdate we're checking, in ISO 8601 format
+            const birthdate = date1;
+
+            // Get today date in ISO 8601 format
+            const today = moment().format('YYYY-MM-DD');
+
+            // Calculate current age of person in years (moment truncates by default)
+            const years = moment().diff(birthdate, 'years');
+
+            // Special case if birthday is today; we do NOT need an extra year added
+            const adjustToday = birthdate.substring(5) === today.substring(5) ? 0 : 1;
+
+            // Add age plus one year (unless birthday is today) to get next birthday
+            const nextBirthday = moment(birthdate).add(years + adjustToday, 'years');
+
+            // Final calculation in days
+            const daysUntilBirthday = nextBirthday.diff(today, 'days');
+
+            var now0 = new Date(); 
+            var ttt0 = Math.floor((now0 - date0)/(1000*60*60*24*365));
+                if (date0<now0) {
+                    document.getElementById('output').innerHTML = `Вам ${ttt0} лет, вам до следущего дня рождения ${daysUntilBirthday} дней.`;
+                } else if (date1 == today) {
+                    document.getElementById('raz').innerHTML = `<b>Поздравляю с днем рождения!</b>`;
+                } else if (date1 > today) {
+                    document.getElementById('output').innerHTML = `Дата не может быть в будущем`;
+                } else {
+                    document.getElementById('output').innerHTML = `Дата некорректна`;
+                }
+            }
+        </script>
+    </body>
+</html>

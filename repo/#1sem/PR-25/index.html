@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-25</title>
+</head>
+<body>
+    <script>
+        let p = document.querySelectorAll('.lol4');
+        
+        [...p].map(function (e) {
+        e.style.color = '#'+(Math.random() * 0x1000000 | 0x1000000).toString(16).slice(1);
+        });
+    </script>
+    <h1>Задача №1</h1>
+    <h2>Условия задачи:</h2>
+    <p id="ida"></p>
+    <button onclick="btn1()">Выполнить</button>
+    <hr>
+    <script>
+        function btn1(){
+            const books = {
+                book1: 'Книга1',
+                book2: ', ',
+                book3: 'Книга3',
+                book4: ', ',
+                book5: 'Книга5, ',
+                book6: 'Книга6'
+            }
+            let key = ''
+            let txt = ''
+            let txt2 = ''
+            let i = '1' 
+            
+            for (key in books) {
+                txt = books[key] + '<br>';
+                txt2 = '№' + i++ + ' - ' + txt;
+            document.getElementById('ida').innerHTML+=txt;
+            }}
+        </script>
+
+    <h1>Задача №2</h1>
+    <h2>Создать объект групп, содержащий сведения не менее чем о 4 группах. Перебрать и вывести на страницу построчно</h2>
+    <div class="ida2">
+        <p id="ida2"></p>
+        <button onclick="button2()">Выполнить</button>
+        <hr>
+    </div>
+    <script>
+        function button2(){
+        var group1 = {
+        name:'СИП',
+        number:'113',
+        people:'12'
+        }
+        var group2={
+        name:'СОБ',
+        number:'123',
+        people:'15' 
+        }
+        var group3={
+        name:'СЭС',
+        number:'213',
+        people:'19'
+        }
+        var group4={
+        name:'СИП',
+        number:'233',
+        people:'23'}
+
+        var groupsall=[group1,group2,group3,group4];
+        groupsall.forEach(two)
+        function two(value,index,array){
+            document.getElementById('ida2').innerHTML+=' Группа: ' +value.name + ' номер ' + value.number + ' содержит ' + value.people + ' студентов' + '<br>'
+        }
+    }
+    </script>
+    <style>
+    #ida2{
+        color: rgb(84,16,16);
+            font-style: italic;
+            font-size: 16px;
+        }
+    </style>
+
+    <h1>Задача №3</h1>
+    <h2>По кнопке запускается модальное окно, вводятся числа, по окончанию считается сумма</h2>
+    <div class="ida3">
+        <p id="ida3"></p>
+        <button onclick="btn3()">Вввод</button>
+        <hr>
+    </div>
+    <script>
+        function btn3(){
+            var sum = 0;
+    
+        while (c = parseFloat(prompt("Введите число:"))){ sum += c;} 
+        document.getElementById('ida3').innerHTML=("Сумма введенных вами чисел равна " + sum);}
+    </script>
+    <style>
+        #ida3{
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <h1>Задача №4</h1>
+    <h2>Создать объект из 5 элементов с ключами столиц мира. С помощью for-in вывести на экран строки.</h2>
+    <div id='div4'></div><p class="lol4" id="ida4"></p>
+        <button id="butId" onclick="btn4()">Вывод</button>
+        <hr>
+
+    <script>
+        function btn4(){
+            const couci = [ 
+            { city: 'Москва', country: 'Россия'},
+            { city: 'Варшава', country: 'Польша'},
+            { city: 'Вашингтон', country: 'США'},
+            { city: 'Вильнюс', country: 'Литва'},
+            { city: 'Лондон', country: 'Англий'},
+            { city: 'Лиссабон', country: 'Португалия'},
+            { city: 'Пекин', country: 'Китай'}
+            ];
+            document.getElementById('ida4').innerHTML = `<ol id='ida4-1'start='1'></ol>`
+            couci.forEach( str => {
+            document.getElementById('ida4-1').innerHTML += `<li>${str.city}`+ ' - это ' + `${str.country}</li>`;
+            });
+            let p = document.querySelectorAll('.lol4');
+        
+            [...p].map(function (e) {
+            e.style.color = '#'+(Math.random() * 0x1000000 | 0x1000000).toString(16).slice(1);
+            });
+        }
+    </script>
+
+    <h1>Задача №5</h1>
+    <h2>Создать массив из машин emoji + название, перебрать его через for each и вывести на экран запись</h2>
+    <p id="ida5"></p>
+    <button onclick="btn5()">Вывод</button>
+    <hr>
+    <script>
+        function btn5(){
+        const cars = ['🚛 Фургон','🚜 Трактор','🚚 Доставка','🏎️ Болид']
+        cars.forEach(function(item, i, cars) {
+            document.getElementById('ida5').innerHTML += ((i+1) + ": " + item + " (массив:" + cars + ")<br>");
+        });
+        }
+    </script>
+
+    <h1>Задача №6</h1>
+    <h2>После нажатия кнопки выполнить спросить возраст 1-100 и вывести сообщение</h2>
+    <p id="ida6"></p>
+    <button onclick="btn6()">Выполнить</button>
+    <hr>
+    <script>
+        function btn6(){
+            let value = prompt('Введите число от 1 до 100');
+            while (value < 1 && value > 100) {
+                value = prompt('Введите число еще раз')
+            }
+            if (value == 1) {
+            alert('Вам ' + value + ' год. Вы ребенок');
+            } else if (value >=2 && value <=3){
+                alert('Вам ' + value + ' года. Вы ребенок');
+            } else if (value >= 5 && value<=17){
+                alert('Вам ' + value + ' лет. Вы ребенок');
+            } else if (value >=18 && value <=30){
+                alert('Вам ' + value + ' лет. Вы молодой');
+            } else if (value >=30 && value <=55){
+                alert('Вам ' + value + ' лет. Вы зрелый');
+            } else if (value >=55 && value <=100){
+                alert('Вам ' + value + ' лет. Вы старый');
+            }}
+    </script>
+
+    <h1>Задание №7</h1>
+    <h2>Пользователь вводит 1-7, затем число. вывод: сумма</h2>
+    <p id="ida7"></p>
+    <button onclick="btn7()">Выполнить</button>
+    <hr>
+    <script>
+        function btn7(){
+            let sum7 = 0;
+            let numprompt = prompt('Введите кол-во вводимых значений (1-7)')
+            while (numprompt) {
+                sum7 += parseFloat(prompt(`${numprompt}`));
+                numprompt--;
+            }
+            document.getElementById('ida7').innerHTML = `Сумма введенных чисел равна: ${sum7}`;
+        }
+    </script>
+
+    <h1>Задание №8</h1>
+    <h2>Возвести 8 в 12 степень и вычислить корень из 59049 построчно вывести на страницу</h2>
+    <p id="ida8">Возведение в степень: <br></p>
+    <p id="ida9">Корень из 59049: </p>
+    <button onclick="btn8()">Возвести</button>
+    <hr>
+    <script>
+    function btn8(){
+        let step = '';
+        let i = 1;
+        let finishstep = 12
+        while (finishstep){
+            step = 8*i++;
+            finishstep--
+            document.getElementById('ida8').innerHTML+=step + '<br>';
+        }
+        document.getElementById('ida9').innerHTML+=Math.sqrt(59049);
+    
+    }
+    </script>
+    <style>
+    #ida8,#ida9,#ida7 {
+    color: green;
+    font-style:italic;
+    font-size: 16px;
+    }
+    #ida4 {
+        color: rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (0,3) + ')
+    }
+    </style>
+    </body>
+</html>

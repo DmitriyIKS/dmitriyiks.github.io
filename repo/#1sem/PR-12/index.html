@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cлайдер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="imaging">
+    <div class="imgMain">
+<span id="onclick1" class="btn">left</span>
+<img src="img/1.jpg" alt="fon" id="selectedImg" style="width: 500px; height:500px">
+<span id="onclick2" class="btn">right</span>
+    </div>
+    <div class="slider" id="photo">
+        <img src="img/1.jpg" class="img" alt="li1" id="1">
+        <img src="img/2.jpg" class="img" alt="li1" id="2">
+        <img src="img/3.jpg" class="img" alt="li1" id="3">
+        <img src="img/4.jpg" class="img" alt="li1" id="4">
+        <img src="img/5.jpg" class="img" alt="li1" id="5">
+        <img src="img/6.jpg" class="img" alt="li1" id="6">
+        <img src="img/7.jpg" class="img" alt="li1" id="7">
+        <img src="img/8.jpg" class="img" alt="li1" id="8">
+        <img src="img/9.jpg" class="img" alt="li1" id="9">
+        <img src="img/10.jpg" class="img" alt="li1" id="10">
+
+    </div>
+
+    </div> 
+<div class="info">    
+    <div class="speed">
+        <p class="text">Скорость прокрутки</p>
+            <div class="minmax">
+                <div class="text">min&bump;</div>
+                <div class="text">max</div>
+            </div>    
+    <input type="range" min="0" max="100" id="timeSelect" step="5">
+    </div>
+    <P><button id="start"> Вкл/Выкл</button></P>
+
+    <p class="text">Индикатор прокрутки</p>
+        <div class="indicatorMain">
+            <div class="indicator" id="procent"></div> 
+        </div>
+            <div class="opisanie">
+            <p class="text">описание слайда</p>
+            <textarea name="note" id="note" class="text"></textarea>
+        </div>
+            <div class="vkl">
+                <p class="text">Вкл/Выкл</p>
+                <label class="switch" for="toggle">
+                    <input type="checkbox" id="toggle">
+                </label>
+
+
+
+            </div>
+    </div>
+</div>
+<!-- <input type="range"class="range" min="1000" max="20000" value="1000" step="1000">
+    <script> 
+    //var a; 
+    //a = document.querySelectorAll('.range').value;
+       // var slides = document.querySelectorAll('#slides .slide');
+        //var currentSlide = 0;
+        //var slideInterval = setInterval(nextSlide, a);
+    
+       // function nextSlide() {
+        //slides[currentSlide].className = 'slide';
+       // currentSlide = (currentSlide+1)%slides.length;
+        //slides[currentSlide].className = 'slide showing';
+       // }    
+    </script>-->
+</body>
+</html>

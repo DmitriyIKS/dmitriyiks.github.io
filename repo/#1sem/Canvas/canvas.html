@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 Canvas lol</title>
+    <style>
+        canvas{
+            border:1px dashed black;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var canvas = 
+            document.getElementById('drawingCanvas');
+            var context = canvas.getContext('2d');
+            
+            ///function stil0() {
+            ///context.moveTo(10,40);{
+            ///context.lineTo(400,40);
+            ///context.lineWidth=10;
+            ///context.lineCap='round';
+            ///context.strokeStyle= '#0BFFFF';
+            
+           /// context.strokeRect(50,50,100,100);
+            ///context.stroke();
+            //} 
+           //}
+            ///function stil() {
+            ///context.moveTo(90,40);
+            ///context.lineTo(400,290)
+            ///context.lineWidth=1;
+           /// context.strokeStyle= '#ff0000';
+           ///context.stroke()
+           /// context.fillRect(170,120,100,100);
+            ///context.rectStyle= '#ffff00';
+            context.fillStyle= '#ffff00'
+            context.fillRect(0,0,100,100);
+            context.clearRect(0,0,50,100);
+            context.fillStyle= 'red';
+            context.fillRect(0,0,50,100);
+            context.stroke();
+            //} 
+        }
+    </script>
+</head>
+<body>
+    <canvas id='drawingCanvas' width="500" height="300"></canvas>
+</body>
+</html>

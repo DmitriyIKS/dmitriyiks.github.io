@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+
+  .row {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+
+  .column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    height: 500px;
+  }
+  
+
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+
+  @media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+  .star {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .column2 {
+    font-weight: 300;
+    font-size: 80px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 33%;
+    text-align: center;
+  }
+  .column3-img, .column1-img, .column1-img2 {
+    width: 100%;
+    text-align: center;
+  }
+  .logo, .logo2 {
+    width: 50%;
+  }
+  .logo2 {
+    text-align: right;
+  }
+  .header-logo {
+    display: -webkit-flex;
+    display: flex;
+  }
+  #ctx3 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .red {
+    background-color:red;
+  }
+  .redStar {
+    color: red;
+  }
+  .img {
+    border: solid grey 2px;
+  }
+  .img-column {
+    height: 300px;
+    width: 100%;
+  }
+  .btn {
+    --color-item-bg: linear-gradient(120deg, #d299c2 0%, #fef9d7 100%);
+    --color-action: #c13a3a;
+    --color-button-bg: #c13a3a;
+    --color-button-text: #ffffff;
+    --button-padding: 1.5rem 3rem;
+    --radius-button: 10px;
+    --border-button: 0;
+  }
+  .action {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
+	margin: 2rem;
+	color: var(--color-action);
+	border: 0;
+	padding: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.action:focus {
+	outline: none;
+}
+a:hover,
+a:focus {
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}

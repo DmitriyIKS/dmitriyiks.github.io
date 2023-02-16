@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORONA</title>
+</head>
+
+<style>
+    canvas {
+        border: 1px dashed green;
+    }
+</style>
+
+<script>
+    window.onload = function(){
+    var canvas = document.getElementById("drawCanvas");
+    var context = canvas.getContext("2d");
+
+     canvas.beginPath(); 
+     canvas.moveTo(50,50);
+     canvas.lineTo(120,150);
+     canvas.lineTo(0,180); 
+     
+     canvas.lineTo(50,310);  
+     canvas.lineTo(160,250);
+     canvas.lineTo(190,370);
+     canvas.lineTo(220,250);
+     canvas.lineTo(330,310);
+     canvas.lineTo(260,210);
+     canvas.lineTo(380,180);
+     canvas.closePath();
+     canvas.stroke();
+
+    }
+</script>
+<body>
+    <canvas id="drawingCanvas" width="300" height="300"></canvas>
+    <canvas id="drawingCanvas2" width="300" height="300"></canvas>
+</body>
+</html>

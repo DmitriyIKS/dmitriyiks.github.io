@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru,en">
+    <head>
+        <title>TASK 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="txt"> <div class="text">
+        <a class="navbar-brand js-scroll" href="index.html">ГЛАВНАЯ СТРАНИЦА</a>
+    <h1>РЕШЕНИЕ ЗАДАЧИ 3</h1>
+    <h2>Напишите в поле предложение</h2>
+    <h3>По кнопке "Выбрать" код выведет вам массив из первых букв слов.</h3>
+    <input type="text" class="input-in" size="60" value=""><button onclick="select()">Выбрать</button>
+    <p id="rer"></p>
+    <script>
+        function select() {
+        let inputIn = document.querySelector('.input-in');
+        let str = inputIn.value;
+        console.log(inputIn)
+        function firstChar(value, index, arr) {  
+            if (index == 0)  
+                return true;  
+            else  
+                return arr[index - 1] === " ";  
+        }  
+ 
+        var array = [].filter.call(str, firstChar);  
+
+        document.getElementById('rer').innerHTML = 'Полученный массив: ' + array.join(', ');
+
+        }
+    </script>
+    </div></div>
+    </body>
+</html>

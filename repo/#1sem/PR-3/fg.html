@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TASK 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt0"> Введите свою дату рождения: <input class="input-in0" id="date1" type="date" value="12.12.2020"> </div>
+        <br>
+
+        <button onclick="dr()" data-text="Посчитать"></button>
+        <div class="put" id="output"></div>
+        <div class="put" id="put"></div>
+        <script>
+            
+            function dr() {
+
+                var date0 = new Date(document.getElementById('date1').value);
+                
+            ///    let den = date0.getDate();
+            ///    let mes = date0.getMonth();
+            ///    let yer = date0.getFullYear(); 
+
+                var now = new Date();
+                var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var a = Math.round((today - date0)/1000/60/60/24/365);
+            document.getElementById('put').innerHTML = a; 
+            if(now.getMonth()>date0.getMonth()){
+                document.getElementById('put').innerHTML = 'Месяцев до дня рождения: ' + (now.getMonth()-date0.getMonth());
+            }else if(now.getMonth()<date0.getMonth()){
+                document.getElementById('put').innerHTML = 'Месяцев до дня рождения: ' + (12-(date0.getMonth()-now.getMonth()));
+            }
+            document.getElementById('output').innerHTML = a;
+            }
+        </script>
+    </body>
+</html>

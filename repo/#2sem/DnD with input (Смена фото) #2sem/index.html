@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Swap</title>
+</head>
+<body>
+    <div class="all">
+       <img src="image/1.png"  id="1" class="pik">
+       <img src="image/2.png"  id="2" class="pik">
+       <img src="image/3.jpg"  id="3" class="pik">
+       <img src="image/4.webp" id="4" class="pik">
+       <img src="image/5.webp" id="5" class="pik">
+       <img src="image/6.webp" id="6" class="pik"> 
+       <br><br><br><br>
+       <img src="image/7.webp" id="7" class="pik">
+       <img src="image/8.webp" id="8" class="pik">
+       <img src="image/9.webp" id="9" class="pik">
+       <img src="image/10.webp" id="10" class="pik">
+       <img src="image/11.webp" id="11" class="pik">
+       <img src="image/12.webp" id="12" class="pik">
+  </div>
+    <input type="number" name="" id="num1" max="12" min="1">
+    <input type="number" name="" id="num2" max="12" min="1">
+    <button onclick="swap()">Поменять</button>
+    <script>
+        function swap(){
+        var array = []
+        var i = -1
+            while(i < 12){
+                i++;
+                array.push(document.getElementById(i));
+                console.log(array[i])
+            }
+
+    n1 = parseInt(document.getElementById('num1').value)
+    n2 = parseInt(document.getElementById('num2').value)
+
+    var src1 = array[n1 ].getAttribute('src')
+    var src2 = array[n2 ].getAttribute('src')
+
+    array[n1].setAttribute('src', src2)
+    array[n2].setAttribute('src', src1)
+}
+    </script>
+</body>
+</html> 

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en, ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Методы массивов</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+<h1>Решение задачи №4</h1>
+<h2>Заполнить массив со значениями от -60 до 70</h2>
+<p>Создать, ввести и вывести: Массив, Произведение с четными индексами, Число N, Числа больше N</p>
+<input id="input" type="number" min="0" />
+<button onclick="crtFunc()">Создать</button>
+<p id="p1num"></p>
+<p id="p2num"></p>
+<p id="p3num"></p>
+<p id="p4num"></p>
+<script>
+  let nums = [];
+  function crtFunc(){
+  var inputNum = document.getElementById("input").value;
+
+  function getRand(min, max){
+      return Math.floor(Math.random() * (max - min) + min);
+  }
+  for (var i = 0; i < 22; i++){
+      var num = getRand(-60, 70);
+      nums.push(num);
+  }
+
+  let chetnie = nums.filter((_, index) => index % 2 == 0);
+  var comp = 0;
+  let arr = [];
+  for (var j = 0; j < chetnie.length; j++){
+      if (chetnie[j] > inputNum){
+          arr.push(chetnie[j]);
+          function composition(){
+              return arr.reduce((a,b) => a*b);
+  }
+  comp = composition();
+      }
+  }
+  
+  document.getElementById("p1num").innerHTML = "Созданный массив: " + nums;
+  document.getElementById("p2num").innerHTML = "Произведение с четными индексами: " + comp;
+  document.getElementById("p3num").innerHTML = "Число N: " + inputNum;
+  document.getElementById("p4num").innerHTML = "Числа больше N: " + arr;
+
+
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random krug</title>
+    <style>
+        canvas{
+            border: 1px dashed black;
+            
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('drawingCanvas');
+            var context = canvas.getContext('2d');
+            var context2 = canvas.getContext('2d');
+
+            for (var i =0; i<6; i++){
+                context.fillStyle = grd;
+                context.arc(100, 100, 70, Math.PI/3 * i, Math.PI/3 * (i+1), false);
+                context.lineTo(100,100);
+                context.fill();
+            }
+
+            for (var g =0; g<6; g++){
+                context2.fillStyle = grd2;
+                context2.arc(400, 100, 70, Math.PI/3 * g, Math.PI/3 * (g+1), false);
+                context2.lineTo(400,100);
+                context2.fill();
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+    <script>
+        var c = document.getElementById("drawingCanvas");
+        var ctx = c.getContext("2d");
+        var ctx2 = c.getContext("2d");
+
+        var grd2 = ctx.createLinearGradient(0, 0, c.width, 0);
+        var grd = ctx.createLinearGradient(0, 0, c.width, 0);
+
+        grd.addColorStop(0,'black');
+        grd.addColorStop("0.3",'magenta');
+        grd.addColorStop("0.5",'blue');
+        grd.addColorStop("0.6",'green');
+        grd.addColorStop("0.8",'yellow');
+        grd.addColorStop(1,'red');
+
+        grd2.addColorStop(1,'black');
+        grd2.addColorStop("0.8",'magenta');
+        grd2.addColorStop("0.6",'blue');
+        grd2.addColorStop("0.5",'green');
+        grd2.addColorStop("0.3",'yellow');
+        grd2.addColorStop(0,'red');
+
+        ctx.fillStyle = grd;
+        ctx.fillStyle = grd2;
+        ctx.fillRect(0,400,c.width, 100);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+    <head>
+        <title>TASK 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="txt"> <div class="text">
+    <a class="navbar-brand js-scroll" href="index.html">ГЛАВНАЯ СТРАНИЦА</a>
+    <h1>РЕШЕНИЕ ЗАДАЧИ 1</h1>
+    <h2>С экрана пользователем вводиться строка в поле input.</h2>
+    <h3>Напишите функцию, которая преобразует первую букву каждого слова строки в верхний регистр.</h3>
+    <input class="input-in" type="text" value="" size="60"><button onclick="help()">Изменить</button>
+    <p id="output"></p>
+    </div></div>
+    <script>
+        let inputIn = document.querySelector('.input-in');
+        function help() {
+        let str = inputIn.value;
+        document.getElementById('output').innerHTML = 'Измененный текст: ' + str.replace(/(?:^|[^\p{L}])(\p{L})/ug, m => m.toUpperCase());
+        }
+    </script>
+    </body>
+</html>

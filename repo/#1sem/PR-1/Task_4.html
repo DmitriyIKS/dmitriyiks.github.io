@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru, en">
+    <head>
+        <title>TASK 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt"> <div class="text">
+            <a class="navbar-brand js-scroll" href="index.html">ГЛАВНАЯ СТРАНИЦА</a>
+            <h1>РЕШЕНИЕ ЗАДАЧИ 4</h1>
+            <h2>Введите массивы в формате "ele1, ele2, ele3"</h2>
+            <h3>Массив 1</h3>
+            <input type="text" class="input-in1" value="1, 2, 3" size="19"> <button onclick="ar1()">Подтвердить</button>
+            <h3>Массив 2</h3>
+            <input type="text" class="input-in2" value="4, 5, 6" size="19"> <button onclick="ar2()">Подтвердить</button>
+            <h3>Массив 3</h3>
+            <input type="text" class="input-in3" value="7, 8, 9" size="19"> <button onclick="ar3()">Подтвердить</button>
+            <h3>Результат</h3>
+            <textarea name="r" id="rer" cols="19" rows="1"></textarea><button onclick="bubbleSort()">Сортировать</button>
+            <p></p>
+            <script>
+                let ar = [];
+                var comma = ', ';
+                function ar1() {
+                    let inputIn = document.querySelector('.input-in1');
+                    let vInputIn = inputIn.value;
+                    let ar1 = vInputIn.split(comma);
+                    console.log(ar1);
+                    Array.prototype.push.apply(ar, ar1);
+                    console.log(ar);
+                }
+                function ar2() {
+                    let inputIn = document.querySelector('.input-in2');
+                    let vInputIn = inputIn.value;
+                    let ar2 = vInputIn.split(comma);
+                    console.log(ar2);
+                    Array.prototype.push.apply(ar, ar2);
+                    console.log(ar);
+                }
+                function ar3() {
+                    let inputIn = document.querySelector('.input-in3');
+                    let vInputIn = inputIn.value;
+                    let ar3 = vInputIn.split(comma);
+                    console.log(ar3)
+                    Array.prototype.push.apply(ar, ar3);
+                    console.log(ar);
+                }
+                function bubbleSort() {
+                            ar.sort();
+                            ar.reverse();
+                            document.getElementById('rer').innerHTML = ar;
+                            console.log(ar)
+                        }
+            </script>
+    </body>
+</html>

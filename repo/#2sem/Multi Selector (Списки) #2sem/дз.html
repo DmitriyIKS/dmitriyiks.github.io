@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Группы</title>
+    
+    <style>
+        body {
+            background-image:url(1644025686_32-phonoteka-org-p-fon-vishenki-32.jpg);
+            display: table;
+  margin: 0 auto;
+  background-size: cover;
+        }
+        #btn{
+            color: rgb(245, 165, 165);
+            border-color: aquamarine;
+            outline:none;
+            border-radius: 10%;
+            box-shadow: royalblue;
+        }
+        .inf{
+            color: black;
+        }
+      
+    </style>
+<body>
+
+    <form name="selectForm">
+ <p>
+
+<select size="5" id="groops" name="groops" multiple="multiple">
+<option selected="selected">СИП143</option>
+<option>СОБ143</option>
+<option>СИП113</option>
+<option>СИП223</option>
+<option>СОБ323</option>
+<option>СОБ313</option>
+<option>СТС213</option>
+<option>СТТ113</option>
+<option>НЕО113</option>
+</select>
+
+</p>
+<input id="btn" type="button" value="Выбрано" class="button">
+</form>
+<div class="all"><p id="info_1"  class="inf">123</p></div>
+</body>
+
+<script>   
+ 
+function howMany(selectObject){
+    var numberSelected = 0;
+    for (var i = 0; i<selectObject.options.length;i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
+    }
+    return numberSelected;
+    document.getElementById('info_1').innerHTML = numberSelected
+}
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+    alert('Выбрано элементов: '+ howMany(document.selectForm.groops))
+    document.getElementById('Выбрано элементов: '+ howMany(document.selectForm.groops))
+});
+</script>
+</html>

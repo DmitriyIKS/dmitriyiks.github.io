@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORONA</title>
+</head>
+
+<style>
+    canvas {
+        border: 1px dashed green;
+    }
+</style>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("drawingCanvas");
+        var context = canvas.getContext('2d');
+
+        context.beginPath();
+        context.arc(80, 100, 56, 3/4 * Math.PI,
+        1/4 * Math.PI, true);
+        context.fill();
+        
+        context.moveTo(40, 140);
+        context.lineTo(20, 40);
+        context.lineTo(60, 100);
+        context.lineTo(80, 20);
+        context.lineTo(100, 100);
+        context.lineTo(140, 40);
+        context.lineTo(120, 140);
+        context.stroke();
+
+        var canvas2 = document.getElementById("drawingCanvas2");
+        var context2 = canvas2.getContext('2d');
+
+        context2.moveTo(80, 100);     
+        context2.lineTo(90, 115);
+        context2.lineTo(80, 129);
+        context2.lineTo(70, 115);
+        context2.lineTo(80, 100);
+        context2.strokeStyle = "yellow";
+        context2.lineWidth = 2;
+        context2.fillStyle = "red";
+        context2.fill();
+
+        context2.stroke();
+
+        function other(){
+        context2.strokeStyle = "black";
+        context2.lineWidth = 1;
+        context2.beginPath();
+        context2.arc(80, 100, 56, 3/4 * Math.PI,
+        1/4 * Math.PI, true); // синия штука
+        context2.fillStyle = "blue";
+        context2.fill();
+
+        context2.lineTo(40, 140);
+        context2.stroke();
+
+        context2.beginPath(); // самая левая
+        context2.arc(19, 31, 10, -68.1, Math.PI * 2, false);
+        context2.fillStyle = "green";
+        context2.fill();
+        context2.closePath();
+        context2.stroke();
+
+        
+        
+        context2.beginPath(); // центральная
+        context2.arc(80, 11, 10, -54.98, Math.PI * 2, false);
+        context2.fillStyle = "yellow";
+        context2.fill();
+        context2.closePath();
+        context2.stroke();
+
+        context2.beginPath(); //правая
+        context2.arc(142, 30, 10, -23.09, Math.PI * 2, false);
+        context2.fillStyle = "#600e7e";
+        context2.fill();
+        context2.closePath();
+        
+        context2.moveTo(40, 140);
+        context2.lineTo(20, 40);
+        context2.lineTo(60, 100);
+        context2.lineTo(80, 20);
+        context2.lineTo(100, 100);
+        context2.lineTo(140, 40);
+        context2.lineTo(120, 140);
+        context2.stroke();
+        }
+
+        other();
+
+    }
+</script>
+<body>
+    <canvas id="drawingCanvas" width="300" height="300"></canvas>
+    <canvas id="drawingCanvas2" width="300" height="300"></canvas>
+</body>
+</html>

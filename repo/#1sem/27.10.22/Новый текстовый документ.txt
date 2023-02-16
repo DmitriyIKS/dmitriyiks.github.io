@@ -1,0 +1,58 @@
+const people = [
+    ["Tom", 25, false],
+    ["Till", 38, true],
+    ["Talice", 21, false],
+]
+console.log(people[0]);
+console.log(people[1]);
+
+
+
+const trees = [
+    ["Береза", "центральная полоса", 88],
+    ["Липа", "Юг", 100],
+    ["Сосна", "Серевер", 300],
+]
+document.write(`${trees[1]} <br>`);
+document.write(trees[0][0], trees[1][0], trees[2][0]);
+
+
+
+const tools = [
+    ["pila", 88],
+    ["otvert", 100],
+    ["drill", 300],
+]
+tools[0][2] = "red";
+tools[1][2] = "blue";
+tools[2][2] = "yellow";
+console.log(tools[0][2]);
+console.log(tools[1][2]);
+console.log(tools[2][2]);
+
+
+
+
+const flowers = 
+    ["rose", "romashka",
+    "gvozd"]
+
+document.write(...flowers);
+
+
+
+const users = ["Tom", "sam", "bob"];
+console.log(users);
+const people1 = [...users];
+const people2 = new Array(...users);
+const people3 = Array.of(...users);
+console.log(people1);
+console.log(people2);
+console.log(people3);
+
+
+const people = ["Tom", "sam", "bob"];
+const employees = [...people];
+employees[0] = "Dan";
+console.log(employees);
+console.log(people);

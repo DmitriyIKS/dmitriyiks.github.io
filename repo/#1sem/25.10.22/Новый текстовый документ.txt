@@ -1,0 +1,67 @@
+
+
+let pc = ["asus","acer","lenovo","benq"]
+pc[22] = "hp";
+pc[6] = "iMac";
+cosole.log(pc);
+
+
+let pc = ["asus","acer","lenovo","benq"]
+pc[22] = "hp";
+pc[6] = "iMac";
+pc[300] = "iMac++";
+pc[2] = "rtx3080";
+pc[22] = "gtx1660";
+alert(pc.length);
+
+
+let comp2 = []
+comp2[22] = "hp";
+comp2[23] = 30000;
+comp2[6] = "iMac";
+comp2[7] = 100000;
+comp2[300] = "iMac++";
+comp2[301] = 1000000;
+comp2[2] = "rtx3080";
+comp2[3] = 71000;
+comp2[24] = "gtx1660";
+comp2[25] = 15000;
+alert(comp2);
+
+
+let comp2 = []
+comp2[0] = "hp";
+comp2[1] = 30000;
+comp2[2] = "iMac";
+comp2[3] = 100000;
+comp2[4] = "iMac++";
+comp2[5] = 1000000;
+comp2[6] = "rtx3080";
+comp2[7] = 71000;
+comp2[8] = "gtx1660";
+comp2[9] = 15000;
+comp2.filter(i => i%1 == 0 && i%2 != 0).map(i => x+=i, x=0).reverse()[0]
+alert(comp2[comp2.filter])
+
+
+let comp2 = ["hp",30000,"iMac",100000,"iMac++",1000000,"rtx3080",71000,"gtx1660",15000];
+for (var i = 0; i < comp2.length; i++)
+    {
+        if ((comp2[i] % 2) === 0)
+        {
+console.log(comp2[i]);
+}
+    }
+
+
+
+arr3 = new Array();
+arr4 = new Array();
+Array.prototype.color = "white";
+alert(arr3.color);
+alert(arr4.color);
+console.log(arr3);
+arr3.color = "blue";
+arr4.color = "red";
+alert(arr3.color);
+alert(arr4.color);

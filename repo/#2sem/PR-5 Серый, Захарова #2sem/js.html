@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PR-5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="titlecont">
+            <h1 class="title1">Система проверки</h1>
+        </div>
+        <div class="conteiner">
+            <div class="inputconteiner">
+                <h2>Введите целые числа через пробел не более 5</h2>
+                <input id="input-in1" class="input-in1" type="text" size="20" tabindex="1" autocomplete="on" value="1 2 7 4 5"><br>
+                <button onclick="next1()">Дальше</button><button onclick="play1()">Записать</button><button onclick="del1()">Стереть</button><br>
+                <h2>lal</h2>
+                <input id="input-in2" class="input-in2" type="text" size="20" tabindex="2" autocomplete="on" value="10 70 30 40 50"><br>
+                <button onclick="next2()">Дальше</button><button onclick="play2()">Записать</button><button onclick="del2()">Стереть</button><br>
+                <h2>lal</h2>
+                <input id="input-in3" class="input-in3" type="text" size="20" tabindex="3" autocomplete="on" value="100 200 300 900 500"><br>
+                <button onclick="next3()">Дальше</button><button onclick="play3()">Записать</button><button onclick="del3()">Стереть</button><br><br>
+                <button onclick="visable()">Отобразить</button><button onclick="sum()">Суммировать</button><button onclick="sort()">Сортировать</button><button onclick="sort1()">Нечетные</button><button onclick="sort2()">Четные</button><br><br>
+                <button onclick="delAll()">Очистить все</button>
+            </div>
+            <div class="resultconteiner">
+                <p>Таблица итогов</p>
+                <table>
+                    <tr>
+                        <td>massiv1 [0]</td>
+                        <td id="0-0">znachenie [0]</td>
+                        <td id="0-1">znachenie [1]</td>
+                        <td id="0-2">znachenie [2]</td>
+                        <td id="0-3">znachenie [3]</td>
+                        <td id="0-4">znachenie [4]</td>
+                    </tr>
+                    <tr>
+                        <td>massiv2 [1]</td>
+                        <td id="1-0">znachenie [0]</td>
+                        <td id="1-1">znachenie [1]</td>
+                        <td id="1-2">znachenie [2]</td>
+                        <td id="1-3">znachenie [3]</td>
+                        <td id="1-4">znachenie [4]</td>
+                    </tr>
+                    <tr>
+                        <td>massiv3 [2]</td>
+                        <td id="2-0">znachenie [0]</td>
+                        <td id="2-1">znachenie [1]</td>
+                        <td id="2-2">znachenie [2]</td>
+                        <td id="2-3">znachenie [3]</td>
+                        <td id="2-4">znachenie [4]</td>
+                    </tr>
+                    <tr>
+                        <td>sum</td>
+                        <td id="3-0">znachenie [0]</td>
+                        <td id="3-1">znachenie [1]</td>
+                        <td id="3-2">znachenie [2]</td>
+                        <td id="3-3">znachenie [3]</td>
+                        <td id="3-4">znachenie [4]</td>
+                    </tr>
+                </table>
+                <button onclick="save1()">Сохранить</button>
+                <br><br>
+                <table>
+                    <tr>
+                        <td>Сумма: </td>
+                        <td id="resultSum">_______</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Массивы: </td>
+                        <td id="resultMass">_______</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Сортировано: </td>
+                        <td id="resultSort">_______</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Нечетные: </td>
+                        <td id="resultSort1">_______</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Четные: </td>
+                        <td id="resultSort2">_______</td>
+                    </tr>
+                </table>
+                <button onclick="save2()">Сохранить</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="FileSaver.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <p class="copyright">&copy; Copyright <strong>DmitriyIKS, moxaos</strong>. MIT License</p>
+            <div class="credits">
+                Designed by <a href="https://vk.com/dmitriyiks/">DmitriyIKS</a>
+            </div>
+    </footer>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>TASK 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt0">
+        <h1>Задание 3</h1>
+        <p>Первая дата:
+        <input type="datetime-local" class="input-in0" id="inp1">
+        </p>
+        <p>Вторая дата:
+        <input type="datetime-local" class="input-in1" id="inp2">
+        </p>
+        <p>Выберите способ для сравнения: </p>
+        <button onclick="srav()" data-text="1 способ"></button>
+        <button onclick="srav2()" data-text="2 способ"></button>
+        <p id="sr1"></p>
+        <p id="sr2"></p>
+        <script>
+            function srav2(){
+                var dt1 = new Date(document.getElementById('inp1').value);
+                var dt2 = new Date(document.getElementById('inp2').value);
+                if (dt1 > dt2){
+                    var diffMs2 = (dt1 - dt2);
+                    var diffDays2 = Math.floor(diffMs2 / 86400000); 
+                    var diffHrs2 = Math.floor((diffMs2 % 86400000) / 3600000);  
+                    var diffMins2 = Math.round(((diffMs2 % 86400000) % 3600000) / 60000); 
+                    minuts2 = Math.floor(diffHrs2 * 60) + diffMins2 + Math.floor(diffDays2 * 1440);
+                    document.getElementById("sr1").innerHTML = 'Между датами: ';
+                    document.getElementById("sr2").innerHTML =  minuts2 + ' минут';
+                }else if (dt2 > dt1){
+                    var diffMs = (dt2 - dt1);
+                    var diffDays = Math.floor(diffMs / 86400000); 
+                    var diffHrs = Math.floor((diffMs % 86400000) / 3600000); 
+                    var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000);
+                    minuts =  Math.floor(diffHrs * 60) + diffMins + Math.floor(diffDays * 1440);
+                    document.getElementById("sr1").innerHTML = 'Между датами: ';
+                    document.getElementById("sr2").innerHTML =  minuts + ' минут';
+                }else{
+                    document.getElementById("sr1").innerHTML = 'Даты равны!';
+                }
+            }
+            function srav(){
+                var dt1 = new Date(document.getElementById('inp1').value);
+                var dt2 = new Date(document.getElementById('inp2').value);
+                var diffMs = (dt2 - dt1); 
+                var diffMs2 = (dt1 - dt2);
+                var diffDays = Math.floor(diffMs / 86400000); 
+                var diffHrs = Math.floor((diffMs % 86400000) / 3600000); 
+                var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); 
+                var diffDays2 = Math.floor(diffMs2 / 86400000); 
+                var diffHrs2 = Math.floor((diffMs2 % 86400000) / 3600000); 
+                var diffMins2 = Math.round(((diffMs2 % 86400000) % 3600000) / 60000);
+                if (dt1 < dt2){
+                    var razn = new Date(dt2 - dt1);
+                    document.getElementById("sr1").innerHTML = 'Между датами: ';
+                    document.getElementById("sr2").innerHTML = 
+                    (razn.getFullYear()-1970) + " лет " + razn.getMonth() + " месяцев " + (razn.getDate()-1) + " дней " + diffHrs + ' часов ' + diffMins + ' минут';
+                }else if (dt1 > dt2){
+                    var razn = new Date(dt1 - dt2);
+                    document.getElementById("sr1").innerHTML = 'Между датами: ';
+                    document.getElementById("sr2").innerHTML = 
+                    (razn.getFullYear()-1970) + " лет " + razn.getMonth() + " месяцев " + (razn.getDate()-1) + " дней " + diffHrs2 + ' часов ' + diffMins2 + ' минут';
+                }else{
+                    document.getElementById("sr1").innerHTML = 'Даты равны!';
+                    document.getElementById("sr2").innerHTML = "";
+                }
+            }
+        </script>
+    </body>
+</html>

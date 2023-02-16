@@ -1,0 +1,8 @@
+
+var home = {
+windows: 5,
+floors: 10,
+color: "lol",
+persons: 30
+};
+alert(home.okna)

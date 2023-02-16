@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="https://allcalc.ru/node/363" />
+<meta name="keywords" content="вычисляет разницу между датами" />
+<meta name="description" content="калькулятор вычисляет разницу между датами, вводите 2 даты и калькулятор подсчитывает разницу между ними." />
+<title>Разница дат | Онлайн калькулятор</title>
+<style>@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local(OpenSans-Light),url(/sites/all/themes/flat/fonts/g01.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116,U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local(OpenSans),url(/sites/all/themes/flat/fonts/g02.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116,U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans Semibold'),local(OpenSans-Semibold),url(/sites/all/themes/flat/fonts/g03.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116,U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}</style>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/flat/style.css" />
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<link rel="icon" type="image/png" sizes="32x32" href="/misc/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/misc/favicon-16x16.png">
+<link rel="manifest" href="/misc/site.webmanifest">
+<link rel="mask-icon" href="/misc/safari-pinned-tab.svg" color="#ffb100">
+<link rel="apple-touch-icon" sizes="180x180" href="/misc/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="msapplication-config" content="/misc/browserconfig.xml">
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+<!-- Yandex.RTB R-A-63670-42 -->
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    type: 'fullscreen',
+    blockId: 'R-A-63670-42'
+  })
+})</script>
+  </head>
+ 
+  <body>
+	  <div id="header">
+	    <div class="region_body">
+			<a href="/" id="logo" alt="Калькулятор онлайн" title="Калькулятор онлайн">
+<svg viewBox="0 0 185 60"><use xlink:href="#logoa" x="0" y="0"  fill="#fff" stroke="#fff"/><use xlink:href="#logob" x="0" y="0"  fill="#fff" stroke="#fff"/></svg>
+	  </a>
+
+<svg  xmlns="http://www.w3.org/2000/svg" style="display:none"><defs><symbol id="logob"><path stroke-width=".48" d="M86 34.41c.03 3.24.72 5.99-1.38 7.52-1.79 1.3-6.52 1.31-8.25-.22-.96-.85-2.04-4.65 1.19-6.22 2.11-1.01 5.83-1.05 8.44-1.08zm-10.59-7.03c2.31-.81 4.09-1.94 7.15-1.55 3.35.44 3.67 3.24 3.48 6.24-3.43.08-7.14.04-10.1 1.27-6.03 2.51-5.41 11.78 2.51 12.03 5.74.18 9.72-.97 10.84-1.58h0v-8.3c-.01-5.27.76-10.85-4.78-12.14-3.07-.72-7.98.07-10.09 1.62l.99 2.41zm26.02 17.18c-.44.21-1.33.48-1.87.54-.55.06-1.03.08-1.44.08-1.28 0-2.1-.45-2.62-1.13-.51-.68-.85-1.62-.85-3.03V14.89c0-.3 3.32-.09 3.32 0v25.13c0 .8.1 1.34.29 1.6.19.26.54.4 1.05.4.25 0 .49-.01.72-.02.23-.02 1.15-.15 1.36-.18l.04 2.74zm29.19-20.3c-1.02-.88-4.46-1.26-6.02-1.23-12.19.26-11.68 16.76-5.64 20.79 3.73 2.48 7.69 1.54 11.2.48v-2.91c-1.44.31-2.38.74-4.16.92-5.17.53-7.62-2.09-7.71-7.71-.06-3.2.79-6.14 2.87-7.5 3.07-2.02 6.37-.6 8.63-.16l.83-2.68zm17.65 10.15c.03 3.24.72 5.99-1.38 7.52-1.79 1.3-6.52 1.31-8.25-.22-.96-.85-2.04-4.65 1.2-6.22 2.1-1.01 5.82-1.05 8.43-1.08zm-10.59-7.03c2.31-.81 4.09-1.94 7.15-1.55 3.35.44 3.67 3.24 3.48 6.24-3.43.08-7.14.04-10.1 1.27-6.03 2.51-5.41 11.78 2.51 12.03 5.74.18 9.72-.97 10.84-1.58h0v-8.3c-.01-5.27.76-10.85-4.78-12.14-3.07-.72-7.98.07-10.09 1.62l.99 2.41zm45.13-3.12c-1.02-.88-4.46-1.26-6.02-1.23-12.19.26-11.68 16.76-5.64 20.79 3.73 2.48 7.69 1.54 11.2.48v-2.91c-1.44.31-2.38.74-4.16.92-5.17.53-7.62-2.09-7.71-7.71-.06-3.2.79-6.14 2.88-7.5 3.07-2.02 6.36-.6 8.62-.16l.83-2.68zm-70.27 20.3c-.43.21-1.33.48-1.87.54-.55.06-1.03.08-1.44.08-1.28 0-2.1-.45-2.62-1.13-.51-.68-.85-1.62-.85-3.03V14.89c0-.3 3.32-.09 3.32 0v25.13c0 .8.1 1.34.29 1.6.19.26.54.4 1.05.4.25 0 .49-.01.72-.02.23-.02 1.15-.15 1.36-.18l.04 2.74zm51.91 0c-.43.21-1.33.48-1.87.54-.55.06-1.03.08-1.44.08-1.28 0-2.1-.45-2.62-1.13-.51-.68-.85-1.62-.85-3.03V14.89c0-.3 3.32-.09 3.32 0v25.13c0 .8.1 1.34.29 1.6.19.26.54.4 1.05.4.25 0 .5-.01.72-.02.23-.02 1.16-.15 1.36-.18l.04 2.74z"/></symbol><symbol id="logoa"><circle stroke-width=".95" cx="29" cy="30" r="19.53"/><circle fill="none" stroke-width="3.57" cx="29" cy="30" r="25.72"/></symbol></defs></svg>	
+			
+			<div id="block-block-41" class="clear-block block block-block">
+
+
+  <div class="content"><span id="allcalcs"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path stroke-width="1.8" d="M0.79 2.55l16.37 0m-13.35 5l16.98 0m-19.84 5l16.36 0"/></svg>Все калькуляторы</span>
+
+</div>
+</div><div id="block-menu-menu-header" class="clear-block block block-menu">
+
+
+  <div class="content"><ul class="menu"><li class="leaf first"><a href="/converter" title="">Конвертеры</a></li>
+<li class="leaf"><a href="/feedback" title="">Обратная связь</a></li>
+<li class="leaf last"><a href="/applications" title="">Приложения</a></li>
+</ul></div>
+</div><div id="block-block-46" class="clear-block block block-block">
+
+
+  <div class="content"><div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://allcalc.ru/search','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Поиск по сайту','suggest':true,'target':'_self','tld':'ru','type':2,'usebigdictionary':false,'searchid':2085703,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'Поиск по сайту','input_placeholderColor':'#000000','input_borderColor':'#7f9db9'}">
+<form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2085703" /><input type="hidden" name="l10n" value="ru" /><input type="hidden" name="reqenc" value="" /><input type="search" name="text" value="" /><input type="submit" value="Найти" /></form>
+</div>
+<style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script></div>
+</div>		</div>
+	  </div>
+  
+	  <div id="menu"><div class="region_body"><div id="block-block-42" class="clear-block block block-block">
+
+
+  <div class="content"><!--noindex-->
+<table><tr><td class="col1"><div class="cat_icon"></div>
+<div  class="home1" id="home1"><b>
+<div><a href="/taxonomy/term/2">Учеба и наука</a><span class='menu_count'>— 607</span></div></b>
+</div>
+<div class="nayka">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/3">Математика</a><span class='menu_count'>— 444</span></div><div><a href="/taxonomy/term/7">Финансы</a><span class='menu_count'>— 65</span></div><div><a href="/taxonomy/term/4">Физика</a><span class='menu_count'>— 56</span></div><div><a href="/taxonomy/term/1">Химия</a><span class='menu_count'>— 16</span></div><div><a href="/taxonomy/term/139">Астрономия</a><span class='menu_count'>— 12</span></div><div><a href="/taxonomy/term/116">Прочее</a><span class='menu_count'>— 12</span></div></div>
+</td>
+<td class="col2"><div class="cat_icon"></div>
+<div id="home1"  class="home1">
+<b>
+<div><a href="/taxonomy/term/20">Красота и здоровье</a><span class='menu_count'>— 112</span></div></b></div>
+<div class="krasota">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/23">Внешность</a><span class='menu_count'>— 19</span></div><div><a href="/taxonomy/term/135">Одежда</a><span class='menu_count'>— 15</span></div><div><a href="/taxonomy/term/83">Здоровье</a><span class='menu_count'>— 19</span></div><div><a href="/taxonomy/term/19">Питание</a><span class='menu_count'>— 27</span></div><div><a href="/taxonomy/term/21">Спорт</a><span class='menu_count'>— 13</span></div><div><a href="/taxonomy/term/24">Дети</a><span class='menu_count'>— 18</span></div></div>
+</td><td class="col3"><div class="cat_icon"></div>
+<div class="home1" id="home1">
+
+<b>
+<div><a href="/taxonomy/term/15">Компьютерная техника</a><span class='menu_count'>— 142</span></div></b></div>
+<div class="komp">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/13">Железо</a><span class='menu_count'>— 103</span></div><div><a href="/taxonomy/term/78">Игры</a><span class='menu_count'>— 7</span></div><div><a href="/taxonomy/term/99">Радиосвязь</a><span class='menu_count'>— 21</span></div><div><a href="/taxonomy/term/16">Фото</a><span class='menu_count'>— 11</span></div></div>
+</td>
+
+<td class="col4"><div class="cat_icon"></div>
+<div class="home1" id="home1">
+<b>
+<div><a href="/taxonomy/term/130">Транспорт</a><span class='menu_count'>— 36</span></div></b></div>
+<div class="auto">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/131">Автомобили</a><span class='menu_count'>— 25</span></div><div><a href="/taxonomy/term/133">Велосипеды</a><span class='menu_count'>— 7</span></div><div><a href="/taxonomy/term/132">Прочее</a><span class='menu_count'>— 4</span></div></div>
+</td><td class="col5"><div class="cat_icon"></div>
+<div class="home1" id="home1">
+<b>
+<div><a href="/taxonomy/term/123">Строительство</a><span class='menu_count'>— 166</span></div></b></div>
+<div class="remont">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/125">Возведение конструкций</a><span class='menu_count'>— 49</span></div><div><a href="/taxonomy/term/124">Отделочные работы</a><span class='menu_count'>— 29</span></div><div><a href="/taxonomy/term/127">Трубопровод</a><span class='menu_count'>— 22</span></div><div><a href="/taxonomy/term/128">Отопление</a><span class='menu_count'>— 10</span></div><div><a href="/taxonomy/term/145">Электрика</a><span class='menu_count'>— 38</span></div><div><a href="/taxonomy/term/129">Прочее</a><span class='menu_count'>— 18</span></div></div>
+</td><td class="col6"><div class="cat_icon"></div>
+<div class="home1" id="home1">
+<b>
+<div><a href="/taxonomy/term/6">Быт</a><span class='menu_count'>— 228</span></div></b></div>
+<div class="bit">
+</div>
+<div class="home" id="home">
+<div><a href="/taxonomy/term/106">Дата и время</a><span class='menu_count'>— 184</span></div><div><a href="/taxonomy/term/56">Животные</a><span class='menu_count'>— 12</span></div><div><a href="/taxonomy/term/8">Развлечения</a><span class='menu_count'>— 13</span></div><div><a href="/taxonomy/term/113">Ставки</a><span class='menu_count'>— 10</span></div><div><a href="/taxonomy/term/95">Дом</a><span class='menu_count'>— 9</span></div>
+</div>
+</td></tr></table>
+<!--/noindex--></div>
+</div></div></div>
+	  
+	  <div id="adv_top"></div>	  
+	  <div id="main">
+	     	  
+			  
+			
+<script type="text/javascript" src="/sites/all/themes/flat/jquery-3.2.1.min.js"></script>	
+	
+		<div id="content">
+			
+				
+		
+		<div id="node-363" class="node clear-block">
+
+<div class="breadcrumb indent" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Все калькуляторы</span></a><meta itemprop="position" content="1"></li> / <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/taxonomy/term/6" title=""><span itemprop="name">Быт</span></a><meta itemprop="position" content="2"></li> / <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/taxonomy/term/106" title=""><span itemprop="name">Дата и время</span></a><meta itemprop="position" content="3"></li> / &nbsp; Разница дат</div>
+<h1 class="indent" id="cat-287">Разница дат</h1>
+
+
+  <div class="content">
+    <div class="text-description"><p>Зачастую, чтобы соотнести те или иные даты в своей жизни или попросту посчитать какая разница между вами и вашим любимым человеком, приходится применять массу арифметических действий, показывая на все что вы способны. Теперь с появлением нашего онлайн калькулятора высчитать точную разницу между датами, можно вплоть до секунд.<center>
+<div style="margin: 20px 0 25px 0">
+
+<!-- Yandex.RTB R-A-63670-27 -->
+<div id="yandex_rtb_R-A-63670-27"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: "yandex_rtb_R-A-63670-27",
+    blockId: "R-A-63670-27"
+  })
+})</script>			
+	</div></center><p>
+В чем преимущество нашего онлайн калькулятора? Так в том, что теперь вам не надо сидеть целый час перед листком с ручкой и высчитывать эту разницу самостоятельно, буквально за считанные секунды за вас это сделает наш калькулятор. Все что от вас требуется это ввести две даты, время вплоть до минут и часов и все ваш результат готов, а разница подсчитана.
+</p></div>
+
+    <script src="https://allcalc.ru/addition/calendar1/jscal2.js"></script>
+    <script src="https://allcalc.ru/addition/calendar1/lang/ru.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://allcalc.ru/addition/calendar1/jscal2.css" />
+    <link rel="stylesheet" type="text/css" href="https://allcalc.ru/addition/calendar1/border-radius.css" />
+
+<br>
+
+
+<center>
+<form id="calc" class="calc" style="min-width:490px" onsubmit="return false;">
+<table class="new_table">
+<tr><td colspan=2 align=center>
+<h2>Разница между датами</h2>
+</td></tr>
+<tr><td colspan=2 align=center>
+Начальная дата &nbsp; &nbsp; 
+
+  <input type="text" maxlength="17"  placeholder="ДД.ММ.ГГГГ"   id="value1" style="max-width:110px"> <button id="f_btn3" style="margin:2px 0 0 0"><img SRC="/addition/calendar1/calendar.gif"></button>
+</td></tr>
+<tr><td colspan=2 align=center>
+Конечная дата &nbsp; &nbsp;  &nbsp; 
+
+  <input type="text" maxlength="17"  placeholder="ДД.ММ.ГГГГ"   id="value2" style="max-width:110px">  <button id="f_btn4" style="margin:2px 0 0 0"><img SRC="/addition/calendar1/calendar.gif"></button>
+</td></tr>
+<tr><td colspan=2 align=center>
+<label  for="value3"><input type="checkbox" id="value3"  checked /> включая конечную дату </label><br><br>
+</td></tr>
+<tr><td colspan=2 align=center>
+<input type="button" id="calculate-button" value="Вычислить">
+</td></tr>
+<tr><td colspan=2 align=center>
+	                   <div style="margin:50px 5px 70px 5px">
+<center>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- square new -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5806373484372684"
+     data-ad-slot="7183982530"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+</div>					   </td></tr>
+<tr><td colspan=2>
+    <div id="result"></div>
+	<div class="pypyn"><label id="separatorl" for="separator">Разделитель групп разрядов<input type="checkbox" id="separator" checked /></label>
+		
+	<label id="roundl" style="display:none">Округлить до<input value="-" onclick="add('roundChange',-1);return false;" id="minusR" type="button"><select id="roundChange" size="1"><option value="no">нет</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="12">13</option><option value="14">14</option></select><input value="+" onclick="add('roundChange',1);return false;" id="plusR" type="button"></label>
+	
+	<label id="prnumbe" style="display:none">Число прописью <select id="numberword" size="1"><option value="0" selected="selected">нет</option><option value="1">при наведении</option><option value="2">всегда</option></select> </label></div>
+
+	</div>
+</td></tr></table>
+</form>
+</center>
+
+<script type="text/javascript" src="/phpcalc/script/ajax-tmt-363.js"></script>
+    <script type="text/javascript">//<![CDATA[
+      Calendar.setup({
+        inputField : "value1",
+        trigger    : "f_btn3",
+        onSelect   : function() { this.hide() },
+        dateFormat : "%d.%m.%Y"
+      });
+
+	        Calendar.setup({
+        inputField : "value2",
+        trigger    : "f_btn4",
+        onSelect   : function() { this.hide() },
+        dateFormat : "%d.%m.%Y"
+      });
+    //]]></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rslokadv" style="position:absolute; margin-top:75px; width: 360px;display:none;">
+</div>
+
+<center>
+<form action="#" name="form"  method="get" style="min-width:310px;">
+<table class=my_table>
+<tr align=left><td>Первая дата </td><td> <input placeholder="ДД.ММ.ГГГГ" type="text" name="date1" style="width:190px;" id="date1" /> <button id="f_btn1"><img SRC="/addition/calendar1/calendar.gif"></button></td></tr>
+<tr align=left><td>Вторая дата </td><td> <input type="text" placeholder="ДД.ММ.ГГГГ" name="date2" style="width:190px;" id="date2" /> <button id="f_btn2"><img SRC="/addition/calendar1/calendar.gif"></button></td></tr>
+<tr align=center><td colspan=2>
+<label  for="enddate"><input type="checkbox" id="enddate" checked /> включая конечную дату </label>
+</td></tr>
+<tr align=center><td colspan=2>
+<input type="button" value="Вычислить" onClick="DifferenceCounter(45)"></td></tr>
+<tr align=left><td colspan=2>
+<div id="result1"></div></td></tr>
+</table>
+
+</form></center>
+    <script type="text/javascript">//<![CDATA[
+      Calendar.setup({
+        inputField : "date1",
+        trigger    : "f_btn1",
+        onSelect   : function() { this.hide() },
+        showTime   : 24,
+        dateFormat : "%d/%m/%Y %H:%M:%S"
+      });
+	        Calendar.setup({
+        inputField : "date2",
+        trigger    : "f_btn2",
+        onSelect   : function() { this.hide() },
+        showTime   : 24,
+        dateFormat : "%d/%m/%Y %H:%M:%S",
+      });
+    //]]></script>
+
+
+<script>
+
+
+
+   var dateFormaten = function () {
+       var    token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
+           timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
+           timezoneClip = /[^-+\dA-Z]/g,
+           pad = function (val, len) {
+               val = String(val);
+               len = len || 2;
+               while (val.length < len) val = "0" + val;
+               return val;
+           };
+
+       // Regexes and supporting functions are cached through closure
+       return function (date, mask, utc) {
+           var dF = dateFormaten;
+
+           // You can't provide utc if you skip other args (use the "UTC:" mask prefix)
+           if (arguments.length == 1 && Object.prototype.toString.call(date) == "[object String]" && !/\d/.test(date)) {
+               mask = date;
+               date = undefined;
+           }
+
+           // Passing date through Date applies Date.parse, if necessary
+           date = date ? new Date(date) : new Date;
+           if (isNaN(date)) throw SyntaxError("invalid date");
+
+           mask = String(dF.masks[mask] || mask || dF.masks["default"]);
+
+           // Allow setting the utc argument via the mask
+           if (mask.slice(0, 4) == "UTC:") {
+               mask = mask.slice(4);
+               utc = true;
+           }
+
+           var    _ = utc ? "getUTC" : "get",
+               d = date[_ + "Date"](),
+               D = date[_ + "Day"](),
+               m = date[_ + "Month"](),
+               y = date[_ + "FullYear"](),
+               H = date[_ + "Hours"](),
+               M = date[_ + "Minutes"](),
+               s = date[_ + "Seconds"](),
+               L = date[_ + "Milliseconds"](),
+               o = utc ? 0 : date.getTimezoneOffset(),
+               flags = {
+                   d:    d,
+                   dd:   pad(d),
+                   ddd:  dF.i18n.dayNames[D],
+                   dddd: dF.i18n.dayNames[D + 7],
+                   m:    m + 1,
+                   mm:   pad(m + 1),
+                   mmm:  dF.i18n.monthNames[m],
+                   mmmm: dF.i18n.monthNames[m + 12],
+                   yy:   String(y).slice(2),
+                   yyyy: y,
+                   h:    H % 12 || 12,
+                   hh:   pad(H % 12 || 12),
+                   H:    H,
+                   HH:   pad(H),
+                   M:    M,
+                   MM:   pad(M),
+                   s:    s,
+                   ss:   pad(s),
+                   l:    pad(L, 3),
+                   L:    pad(L > 99 ? Math.round(L / 10) : L),
+                   t:    H < 12 ? "a"  : "p",
+                   tt:   H < 12 ? "am" : "pm",
+                   T:    H < 12 ? "A"  : "P",
+                   TT:   H < 12 ? "AM" : "PM",
+                   Z:    utc ? "UTC" : (String(date).match(timezone) || [""]).pop().replace(timezoneClip, ""),
+                   o:    (o > 0 ? "-" : "+") + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
+                   S:    ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10]
+               };
+
+           return mask.replace(token, function ($0) {
+               return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
+           });
+       };
+   }();
+
+   // Some common format strings
+   dateFormaten.masks = {
+       "default":      "ddd mmm dd yyyy HH:MM:ss",
+       shortDate:      "m/d/yy",
+       mediumDate:     "mmm d, yyyy",
+       longDate:       "mmmm d, yyyy",
+       fullDate:       "dddd, mmmm d, yyyy",
+       shortTime:      "h:MM TT",
+       mediumTime:     "h:MM:ss TT",
+       longTime:       "h:MM:ss TT Z",
+       isoDate:        "yyyy-mm-dd",
+       isoTime:        "HH:MM:ss",
+       isoDateTime:    "yyyy-mm-dd'T'HH:MM:ss",
+       isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'"
+   };
+
+   // Internationalization strings
+   dateFormaten.i18n = {
+       dayNames: [
+           "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
+           "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+       ],
+       monthNames: [
+           "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+           "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+       ]
+   };
+
+   // For convenience...
+   Date.prototype.formaten = function (mask, utc) {
+       return dateFormaten(this, mask, utc);
+   };
+
+
+
+
+
+
+
+
+
+function DifferenceCounter(){
+
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+
+  	var dat1 = document.form.date1.value.split('/').join(',').split('.').join(',').split(/[-,]+/).join(',').split(/[ ,]+/);
+    var dates1 = dat1.splice(0,1,dat1[1]);
+    var datess1 = dat1.splice(1,1,dates1);
+   dat1 = dat1.toString().replace(/,/g, "-");
+dat1 = dat1.substring(6, 11)+dat1.substring(0, 3)+dat1.substring(3, 5) +"T"+ dat1.substring(11)+"Z";
+
+    var dat2 = document.form.date2.value.split('/').join(',').split('.').join(',').split(/[-,]+/).join(',').split(/[ ,]+/);
+    var dates2 = dat2.splice(0,1,dat2[1]);
+    var datess2 = dat2.splice(1,1,dates2);
+   dat2 = dat2.toString().replace(/,/g, "-");
+dat2 = dat2.substring(6, 11)+dat2.substring(0, 3)+dat2.substring(3, 5) +"T"+ dat2.substring(11)+"Z";
+
+  //  var dated1 = new Date(date1.formaten("dd/mm/yyyy"));
+  //  var dated2 = new Date(date2.formaten("dd/mm/yyyy"));
+
+    var date1 = new Date(dat1);
+    var date2 = new Date(dat2);
+  if (document.form.enddate.checked)
+  { 
+date2.setDate(date2.getDate() + 1);
+ }
+    var dated1 = new Date(date1.formaten("dd/mm/yyyy"));
+    var dated2 = new Date(date2.formaten("dd/mm/yyyy"));
+
+
+
+
+
+
+  	var sec = (date2.getTime()/1000.0) - (date1.getTime()/1000.0);
+
+	a= "<table>";
+	a+= "<tr><td colspan=2>Временная разница составляет:</td></tr><tr id=my_color><td colspan=2>"+TimeDifferenceCounter(sec)+"</td></tr>";
+	a+= "<tr><td width=220>Разница в секундах: </td><td id=my_color align=right>"+Math.round(sec)+"</td></tr>";
+	a+= "<tr><td>Разница в минутах:</td><td id=my_color align=right>"+Math.round(sec/60)+"</td></tr>";
+	a+= "<tr><td>Разница в часах:</td><td id=my_color align=right>"+Math.round(sec/60/60)+"</td></tr>";
+	a+= "<tr><td>Разница в днях:</td><td id=my_color align=right>"+Math.round(sec/60/60/24)+"</td></tr>";
+	a+= "<tr><td>Разница в месяцах:</td><td id=my_color align=right>"+Math.round(sec/2629743)+"</td></tr>";
+	a+= "<tr><td>Разница в годах:</td><td  id=my_color align=right>"+Math.round(sec/31556926)+"</td></tr>";
+	a+= "</table>";
+	document.getElementById('result1').innerHTML = a;
+}
+
+function TimeDifferenceCounter(sec){
+	var t = parseInt(sec);
+	var years;var months;var days;
+/*	if(t>31556926){
+		years = parseInt(t/31556926); t = t-(years*31556926);
+	}
+	if(t>2629743){
+		months = parseInt(t/2629743); t = t-(months*2629743);
+	} */
+	if(t>86400){
+		days = parseInt(t/86400); t = t-(days*86400);
+	}
+	var hours = parseInt(t/3600);
+	t = t-(hours*3600);
+	var minutes = parseInt(t/60);
+	t = t-(minutes*60);
+	var content = "";
+	if(years)content+=years+" Год(а)";
+	if(months){ if(content)content+=", "; content+=months+" Месяцев(а)"; }
+	if(days){ if(content)content+=", ";  content+=days+" Дней(я)"; }
+	if(hours||days){ if(content)content+=",<br>"; content+=hours+" Часов(а)"; }
+	if(content)content+=", "; content+=minutes+" Минут(ы) "+t+" Секунд(ы)";
+	return content;
+}
+
+
+</script>
+<br><br>
+
+<form action="/node/363"  accept-charset="UTF-8" method="post" id="fivestar-form-node-363" class="fivestar-widget">
+<div><div class="fivestar-form-vote-363 clear-block"><input type="hidden" name="content_type" id="edit-content-type" value="node"  />
+<input type="hidden" name="content_id" id="edit-content-id" value="363"  />
+<div class="fivestar-form-item  fivestar-average-text fivestar-average-stars fivestar-labels-hover"><div class="form-item" id="edit-vote-wrapper">
+ <input type="hidden" name="vote_count" id="edit-vote-count" value="195"  />
+<input type="hidden" name="vote_average" id="edit-vote-average" value="66.7692"  />
+<input type="hidden" name="auto_submit_path" id="edit-auto-submit-path" value="/fivestar/vote/node/363/vote"  class="fivestar-path" />
+<select name="vote" class="form-select" id="edit-vote-1" ><option value="-">Select rating</option><option value="20">1</option><option value="40">2</option><option value="60">3</option><option value="80" selected="selected">4</option><option value="100">5</option></select><input type="hidden" name="auto_submit_token" id="edit-auto-submit-token" value="8d51c197647db888414c498199c6d06c"  class="fivestar-token" />
+
+ <div class="description"><div itemscope itemtype=http://schema.org/Article><div  itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating" class="fivestar-summary fivestar-summary-average-count fivestar-feedback-enabled"><span class="average-rating">Рейтинг: <span itemprop="ratingValue">3.3</span></span> <span class="total-votes">(Голосов <span itemprop="reviewCount ratingCount">195</span>)</span><meta itemprop="bestRating" content="5" /><meta itemprop="worstRating" content="1" /></div></div></div>
+</div>
+</div><input type="hidden" name="destination" id="edit-destination" value="node/363"  />
+<input type="submit" name="op" id="edit-fivestar-submit" value="Rate"  class="form-submit fivestar-submit" />
+<input type="hidden" name="form_build_id" id="form-IAJxcK86L-K9zNzBzfbKTM3fYzHFtTzJqqxz_wRKNPA" value="form-IAJxcK86L-K9zNzBzfbKTM3fYzHFtTzJqqxz_wRKNPA"  />
+<input type="hidden" name="form_id" id="edit-fivestar-form-node-363" value="fivestar_form_node_363"  />
+</div>
+</div></form>
+
+<style>.ya-share2__badge {border-radius: 0px!important;}@media (max-width: 480px){.ya-share2 {margin: 0 5px 20px 0;}}</style>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div style="float:right" class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,viber,whatsapp,telegram,lj,blogger,skype"   data-limit="9" data-counter=""></div>
+
+<div style="float:left" id="report">
+<a target="_blank" href="/feedback" style="color:#1230EE; text-decoration:underline">Сообщить&nbsp;об&nbsp;ошибке</a>
+</div>		
+
+<div id="seemore">
+<h3>Смотрите также</h3>
+<table><tr>
+<td><a href="https://allcalc.ru/node/553">Количество дней в году</a></td>
+<td><a href="https://allcalc.ru/node/596">Калькулятор дней</a></td>
+<td><a href="https://allcalc.ru/node/369">Текущие дата и время</a></td>
+<td><a href="https://allcalc.ru/node/362">Преобразование дат</a></td>
+<td><a href="https://allcalc.ru/node/360">Сколько времени прошло</a></td>
+</tr><tr>
+<td><a href="https://allcalc.ru/node/359">Какой день недели</a></td>
+<td><a href="https://allcalc.ru/node/357">Вычислить день недели рождения</a></td>
+<td><a href="https://allcalc.ru/node/361">Знак зодиака</a></td>
+<td><a href="https://allcalc.ru/node/628">Лунный день</a></td>
+<td><a href="https://allcalc.ru/node/358">Калькулятор времени</a></td>
+</tr>
+</table>
+</div>  </div>
+
+  </div><div id="comments">
+  <a id="comment-11240"></a>
+<div class="comment comment-published clear-block">
+  
+  
+  <div class="submitted">
+    <div>alex</div> <div>334 дн. назад</div>  </div>
+
+  <div class="content">
+    <p>Калькулятор "Разница дат" некорректно рассчитывает значение периода между датами, находящимися в разных календарных годах, из-за отсутствия возможности задать часы и минуты.<br />
+По этой причине неверно формируется результат выражения "2020-11-22T17:03:57" - "2021-12-17T14:10:03" равный "391 день всего",  вместо 389 полных дней.</p>
+      </div>
+
+  <ul class="links"><li class="comment_reply first last"><a href="/comment/reply/363/11240">reply</a></li>
+</ul></div>
+<div class="indented"><a id="comment-16717"></a>
+<div class="comment comment-published clear-block">
+  
+  
+  <div class="submitted">
+    <div>Sanek</div> <div>120 дн. назад</div>  </div>
+
+  <div class="content">
+    <p>Ну и умный же ты кабачок, alex, да? Все корректно, необходимо понимать, что есть еще високосный год, который является 2020, который продолжается 366 суток за счет добавления лишнего дня в феврале. Не оставляй здесь больше комментариев, куропатка.</p>
+      </div>
+
+  <ul class="links"><li class="comment_reply first last"><a href="/comment/reply/363/16717">reply</a></li>
+</ul></div>
+</div><div class="box">
+
+  <div id="comment-slide">Добавить комментарий:</div>
+
+  <div class="content"><form action="/node/363"  accept-charset="UTF-8" method="post" id="comment-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <input type="text" maxlength="60" name="name" id="edit-name" size="30" value="Анонимный" class="form-text" />
+</div>
+<div class="form-item" id="edit-mail-wrapper">
+ <input type="text" maxlength="64" name="mail" id="edit-mail" size="30" value="" class="form-text" />
+</div>
+<div class="form-item" id="edit-comment-wrapper">
+ <textarea cols="60" rows="15" name="comment" id="edit-comment"  maxlength="1500" placeholder="Введите текст комментария" class="form-textarea resizable required"></textarea>
+</div>
+<input type="hidden" name="form_build_id" id="form-_swxicAfSmqRoavPvASHS4y_UMC3gvubH6a1rCv5eok" value="form-_swxicAfSmqRoavPvASHS4y_UMC3gvubH6a1rCv5eok"  />
+<input type="hidden" name="form_id" id="edit-comment-form" value="comment_form"  />
+<div class="form-item" id="edit-imnotbot-wrapper">
+ <label class="option" for="edit-imnotbot"><input type="checkbox" name="imnotbot" id="edit-imnotbot" value="1"   class="form-checkbox" /> Я не робот</label>
+</div>
+<input type="submit" name="op" id="edit-submit" value="Отправить"  class="form-submit" />
+
+</div></form>
+</div>
+</div>
+</div>
+</div>
+	  </div>
+
+	  
+	<div id="popular"></div>
+	
+	<div id="prefooter"><div class="region_body"></div></div>
+	  
+	<div id="footer"><div id="f_w"></div><div class="region_body"><a href="/" id="logo_f"><svg viewBox="0 0 185 60"><use xlink:href="#logoa" x="0" y="0"  fill="#ffae00" stroke="#ffae00"/><use xlink:href="#logob" x="0" y="0"  fill="#2b2a29" stroke="#2b2a29"/></svg></a>
+	<div id="block-block-30" class="clear-block block block-block">
+
+
+  <div class="content">© 2010-2022 AllCalc.ru</div>
+</div><div id="block-menu-menu-calcs-bottom" class="clear-block block block-menu">
+
+  <h3>Калькуляторы</h3>
+
+  <div class="content"><ul class="menu"><li class="leaf first"><a href="/" title="">Каталог калькуляторов</a></li>
+<li class="leaf"><a href="/converter" title="">Конвертеры</a></li>
+<li class="leaf last"><a href="/search" title="">Поиск калькуляторов</a></li>
+</ul></div>
+</div><div id="block-menu-menu-footer-links" class="clear-block block block-menu">
+
+  <h3>Информация о сайте</h3>
+
+  <div class="content"><ul class="menu"><li class="leaf first"><a href="/" title="">О нашем сайте</a></li>
+<li class="leaf"><a href="/feedback" title="">Обратная связь</a></li>
+<li class="leaf last"><a href="/applications" title="">Приложения для Android</a></li>
+</ul></div>
+</div><div id="block-block-1" class="clear-block block block-block">
+
+
+  <div class="content"><noindex><center><div id="li_counter" class="counter">
+<!--LiveInternet counter--><a href="//www.liveinternet.ru/click"
+target="_blank"><img id="licnt9816" width="88" height="31" style="border:0" 
+title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licnt9816").src=
+"//counter.yadro.ru/hit?t14.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+</div></center></noindex>
+<!-- Yandex.Metrika counter --><script type="text/javascript" >(function (d, w, c) {(w[c] = w[c] || []).push(function() {try {w.yaCounter45774741 = new Ya.Metrika({id:45774741,clickmap:true,trackLinks:true,accurateTrackBounce:true});} catch(e) { }});var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),f = function () { n.parentNode.insertBefore(s, n); };s.type = "text/javascript";s.async = true;s.src = "https://mc.yandex.ru/metrika/watch.js";if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); }})(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/45774741" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --></div>
+</div><div style="clear:both"></div></div></div>
+
+<script type="text/javascript">
+!function(e,t){"use strict";var o=e.querySelector("#header");if(!o)return;var s=0,r=0,a=0,n=0,l=0;t.addEventListener("scroll",function(){s=o.offsetHeight,e.body.offsetHeight,t.innerHeight,a=t.pageYOffset,l=n-a,r=parseInt(t.getComputedStyle(o).getPropertyValue("top"))+l,a<=0?o.style.top="0px":0<l?o.style.top=(0<r?0:r)+"px":l<0&&($("#menu").removeClass("open"),$("#allcalcs").removeClass("active")),n=a})}(document,window);
+$( "#allcalcs" ).click(function() { $(this).toggleClass("active"); $( "#menu" ).toggleClass("open"); $( "#menu" ).show();});
+
+!function(){var a=jQuery.fn.init;jQuery.fn.init=function(b,c,d){if(b&&"string"===typeof b){var e=b.indexOf("#");if(e>=0){var f=b.indexOf("<");if(f>e)throw"Syntax error, unrecognized expression: "+b}}return a.call(this,b,c,d)},jQuery.fn.init.prototype=a.prototype}();var Drupal=Drupal||{settings:{},behaviors:{},themes:{},locale:{}};Drupal.jsEnabled=document.getElementsByTagName&&document.createElement&&document.createTextNode&&document.documentElement&&document.getElementById,Drupal.attachBehaviors=function(a){a=a||document,Drupal.jsEnabled&&jQuery.each(Drupal.behaviors,function(){this(a)})},Drupal.jsEnabled&&($(document.documentElement).addClass("js"),document.cookie="has_js=1; path=/",$(document).ready(function(){Drupal.attachBehaviors(this)}));
+!function(a){function d(b){a("div.fivestar-summary-"+b.vote.tag+"-"+b.vote.id).html(b.result.summary[b.display.text]),"combo"==b.display.stars&&a("div.fivestar-form-"+b.vote.id).each(function(){var c=a(".fivestar-widget-static .star span",this),d=b.result.average/100*c.length,e=Math.floor(d);c.removeClass("on").addClass("off").css("width","auto"),c.filter(":lt("+(e+1)+")").removeClass("off").addClass("on"),c.eq(e).css("width",100*(d-e)+"%");var f=a(".fivestar-static-form-item .fivestar-summary",this);if(f.length){var g=f.attr("class").replace(/.*?fivestar-summary-([^ ]+).*/,"$1").replace(/-/g,"_");f.html(b.result.summary[g])}})}var b=function(b){var e=c(b),f=a(".star",e),g=a(".cancel",e),h=a(".fivestar-summary",b),i=0,j=h.html(),k=b.is(".fivestar-labels-hover"),l=a("select",b).val(),m=a("label",b).html(),n=m!=Drupal.settings.fivestar.titleAverage?m:Drupal.settings.fivestar.titleUser,o=!1;if(b.is(".fivestar-user-stars"))var p="user";else if(b.is(".fivestar-average-stars")){var p="average";l=a("input[name=vote_average]",b).val()}else if(b.is(".fivestar-combo-stars"))var p="combo";else var p="none";if(b.is(".fivestar-smart-stars"))var p="smart";if(h.length)var q=h.attr("class").replace(/.*?fivestar-summary-([^ ]+).*/,"$1").replace(/-/g,"_");else var q="none";f.mouseover(function(){r.drain(),r.fill(this)}).mouseout(function(){r.drain(),r.reset()}),f.children().focus(function(){r.drain(),r.fill(this.parentNode)}).blur(function(){r.drain(),r.reset()}).end(),g.mouseover(function(){r.drain(),a(this).addClass("on")}).mouseout(function(){r.reset(),a(this).removeClass("on")}),g.children().focus(function(){r.drain(),a(this.parentNode).addClass("on")}).blur(function(){r.reset(),a(this.parentNode).removeClass("on")}).end(),g.click(function(){return l=0,r.reset(),o=!1,a("input.fivestar-path",b).length&&h.is(".fivestar-feedback-enabled")&&s(Drupal.settings.fivestar.feedbackDeletingVote),a("select",b).val(0),m="smart"!=p?m:Drupal.settings.fivestar.titleAverage,a("label",b).html(m),b.is(".fivestar-smart-text")&&(b.removeClass("fivestar-user-text").addClass("fivestar-average-text"),h[0].className=h[0].className.replace(/-user/,"-average"),q=h.attr("class").replace(/.*?fivestar-summary-([^ ]+).*/,"$1").replace(/-/g,"_")),b.is(".fivestar-smart-stars")&&b.removeClass("fivestar-user-stars").addClass("fivestar-average-stars"),a("input.fivestar-path",b).each(function(){var c=a("input.fivestar-token",b).val();a.ajax({type:"GET",data:{token:c},dataType:"xml",url:this.value+"/0",success:t})}),!1}),f.click(function(){return l=a("select option",b).get(f.index(this)+g.length+1).value,a("select",b).val(l),o=!0,r.reset(),a("input.fivestar-path",b).length&&h.is(".fivestar-feedback-enabled")&&s(Drupal.settings.fivestar.feedbackSavingVote),b.is(".fivestar-smart-text")&&(b.removeClass("fivestar-average-text").addClass("fivestar-user-text"),h[0].className=h[0].className.replace(/-average/,"-user"),q=h.attr("class").replace(/.*?fivestar-summary-([^ ]+).*/,"$1").replace(/-/g,"_")),b.is(".fivestar-smart-stars")&&b.removeClass("fivestar-average-stars").addClass("fivestar-user-stars"),a("input.fivestar-path",b).each(function(){var c=a("input.fivestar-token",b).val();a.ajax({type:"GET",data:{token:c},dataType:"xml",url:this.value+"/"+l,success:t})}),!1});var r={fill:function(c){var d=f.index(c)+1;if(f.children("a").css("width","100%").end().filter(":lt("+d+")").addClass("hover").end(),k&&!i){{var e=a("select option",b)[d+g.length].text;a("select option",b)[d+g.length].value}h.html(e!=d+1?e:"&nbsp;"),a("label",b).html(n)}},drain:function(){if(f.filter(".on").removeClass("on").end().filter(".hover").removeClass("hover").end(),k&&!i){var c=a("select option",b)[1].text;h.html(g.length&&0!=c?c:"&nbsp"),o||a("label",b).html(m)}},reset:function(){var c=l/100*f.length,d=100*(c-Math.floor(c));f.filter(":lt("+Math.floor(c)+")").addClass("on").end(),d>0&&f.eq(Math.floor(c)).addClass("on").children("a").css("width",d+"%").end().end(),k&&!i&&h.html(j?j:"&nbsp;"),a("label",b).html(o?n:m)}},s=function(a){i=1,h.html(a)},t=function(b){var c={result:{count:a("result > count",b).text(),average:a("result > average",b).text(),summary:{average:a("summary average",b).text(),average_count:a("summary average_count",b).text(),user:a("summary user",b).text(),user_count:a("summary user_count",b).text(),combo:a("summary combo",b).text(),count:a("summary count",b).text()}},vote:{id:a("vote id",b).text(),tag:a("vote tag",b).text(),type:a("vote type",b).text(),value:a("vote value",b).text()},display:{stars:p,text:q}};window.fivestarResult?fivestarResult(c):d(c),j=c.result.summary[c.display.text],a(c.result.summary.average).is(".fivestar-feedback-enabled")&&(s(0!=c.vote.value?Drupal.settings.fivestar.feedbackVoteSaved:Drupal.settings.fivestar.feedbackVoteDeleted),i=setTimeout(function(){clearTimeout(i),i=0,h.html(c.result.summary[c.display.text])},2e3)),0!=c.vote.value||"average"!=p&&"smart"!=p||(l=c.result.average,r.reset())};return r.reset(),e},c=function(b){for(var h,c=a('<div class="fivestar-widget clear-block"></div>'),d=a("select option",b),e=a("option",b).length-1,f=1,g=1;h=d[g];g++){if("0"==h.value)f=0,$div=a('<div class="cancel"><a href="#0" title="'+h.text+'">'+h.text+"</a></div>");else{var i=(g+f-1)%2==0?"even":"odd",j=g+f-1,k=1==j?" star-first":"",l=j==e+f-1?" star-last":"";$div=a('<div class="star star-'+j+" star-"+i+k+l+'"><a href="#'+h.value+'" title="'+h.text+'">'+h.text+"</a></div>")}c.append($div[0])}return c.addClass("fivestar-widget-"+(e+f-1)),a("select",b).after(c).css("display","none"),c};a.fn.fivestar=function(){var c=[];return this.each(function(){var d=b(a(this));c.push(d)}),c},Drupal.behaviors.fivestar=function(b){a("div.fivestar-form-item:not(.fivestar-processed)",b).addClass("fivestar-processed").fivestar(),a("input.fivestar-submit",b).css("display","none")}}(jQuery);
+jQuery.extend(Drupal.settings, { "basePath": "/", "fivestar": { "titleUser": "Your rating: ", "titleAverage": "Average: ", "feedbackSavingVote": "Ваш голос учтен", "feedbackVoteSaved": "Your vote has been saved.", "feedbackDeletingVote": "Deleting your vote...", "feedbackVoteDeleted": "Your vote has been deleted." } });
+
+window.addEventListener("load",function () { var widwim = document.documentElement.scrollWidth; if(widwim <= 900){ $('body, #header, #menu').css({'min-width':widwim});}; $('.wolframAlphaWidgetContent td.m').click(function() { $('.WolframAlphaWidgetLarge').attr('style', 'width: 575px !important'); widwim = document.documentElement.scrollWidth; $('body, #header, #menu').css({'min-width':widwim}); });	});
+
+$("#comment-slide").click(function(){$(this).siblings("#comments .box .content").slideToggle("slow")}),"Анонимный"==$("#comment-form #edit-name").val()&&$("#comment-form #edit-name").attr("placeholder","Ваше имя").val(""),$(".messages_comments").delay(100).slideToggle("slow"),0<$("#comments .comment").length&&$("#comments .box .content").hide(),$(".links").after("<div class='reply_answer'>ответить</div>"),$(".comment .reply_answer").click(function(){var e,t=$(".comment .reply_answer").index($(this));$("#edit-imnotbot-"+t).length?$(".reply-answerform-"+t).slideToggle("slow"):(e='<div style="display:none" class="',e+="reply-answerform-"+t,e+='"><form action="',e+=$(".comment_reply a").eq(t).attr("href"),e+='" accept-charset="UTF-8" method="post" id="comment-form"><div class="form-item" id="edit-name-wrapper"> <input type="text" maxlength="60" name="name" id="edit-name" size="30" value="" class="form-text comment-processed" placeholder="Ваше имя"></div><div class="form-item" id="edit-mail-wrapper"> <input type="text" maxlength="64" name="mail" id="edit-mail" size="30" value="" class="form-text"></div><div class="form-item" id="edit-comment-wrapper"> <div class="resizable-textarea"><span><textarea cols="60" rows="15" name="comment" id="edit-comment" maxlength="1500" placeholder="Введите текст комментария" class="form-textarea resizable required textarea-processed"></textarea></span></div></div><div class="form-item" id="edit-imnotbot-wrapper"> <label class="option" for="',e+="edit-imnotbot-"+t,e+='"><input type="checkbox" name="imnotbot" id="',e+="edit-imnotbot-"+t,e+='" value="1" class="form-checkbox"> Я не робот</label></div><input type="hidden" name="form_id" id="edit-comment-form" value="comment_form"><input type="submit" name="op" id="edit-submit" value="Отправить" class="form-submit"></form></div>',$(".comment").eq(t).after(e),$(".reply-answerform-"+t).show("slow"))});
+</script>
+
+  </body>
+</html>

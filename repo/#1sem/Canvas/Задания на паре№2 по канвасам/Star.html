@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random krug</title>
+    <style>
+        canvas{
+            border: 1px dashed black;
+            
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('drawingCanvas');
+            var context = canvas.getContext('2d');
+            var context2 = canvas.getContext('2d');
+            context.lineWidth = 4;
+            context.fillStyle = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random()
+             * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (0,3) + ')';
+            context.beginPath();
+            context.moveTo(120,150);
+	        context.lineTo(50,135);
+            context.lineTo(106,120);
+            context.lineTo(90,90);
+            context.lineTo(120,106);
+	        context.lineTo(135,50);
+	        context.lineTo(150,105);
+            context.lineTo(180,90);
+            context.lineTo(167,120);
+	        context.lineTo(220,135);
+            context.lineTo(167,147);
+	        context.lineTo(180,180);
+            context.lineTo(147,167);
+	        context.lineTo(135,220);
+            context.lineTo(117,167);
+	        context.lineTo(90,180);
+            context.lineTo(107,145);
+            context.closePath();
+            context.fill();
+
+            
+            
+	       
+
+            
+
+            
+         }    
+    </script>
+</head>
+<body>
+    <canvas id="drawingCanvas" width="1000" height="1000"></canvas>
+    <script>
+        
+
+    </script>
+</body>
+</html>

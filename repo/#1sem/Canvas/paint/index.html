@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru, en">
+    <head>
+        <title>My First Drawing Script</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <script type="text/javascript" src="js/FileSaver.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+        <body onload="init()">
+            <canvas class="holder" id="can" width="700" height="500" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+            <div class="colorPicker"><input class="btnnClr clrDrw" type="color" name="clrDrw"><input class="btnnClr" type="button" value="color" onclick="color()"></div>
+            <div class="slider"><input oninput="rangeValue.innerText = this.value" type="range" name="range" class="range" id="range" min="1" max="20" value="2" step="1"><label for="range">Line Width </label> <p id="rangeValue">2</p></div>
+            <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+            <div class="groupBtns">
+                
+                <img class="btnn" width="25" height="25" src="img/pencil.png" alt="Рисовать карандашем" onclick="switDraw()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/a.png" alt="Текст" onclick="switTxt()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/marker.png" alt="Маркер" onclick="switDrawC()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/paint-bucket.png" alt="Заливка" onclick="switFillD()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/save.png" alt="Сохранить" onclick="save()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/eraser.png" alt="Ластик" onclick="eraser()" style="border:2px solid;">
+                <img class="btnn" width="25" height="25" src="img/archeology.png" alt="Чистка" onclick="erase()" style="border:2px solid;">
+
+            
+            <div></div>
+            </div>
+            <footer>
+                <p class="copyright">&copy; Copyright <strong>DmitriyIKS, Pipa89, Dragon</strong>. All Rights Reserved</p>
+                <div class="credits">
+                Designed by <a href="https://vk.com/dmitriyiks/">DmitriyIKS</a>
+                </div>
+              </footer>
+        </body>
+    
+</html>

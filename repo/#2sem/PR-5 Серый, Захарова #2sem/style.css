@@ -1,0 +1,25 @@
+.titlecont {
+    width: 800px;
+}
+.title1 {
+    text-align: center;
+}
+.conteiner {
+    width: 800px;
+    height: 600px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.inputconteiner {
+    -webkit-flex: auto;
+    flex: auto;
+    width: 50%;
+}
+.resultconteiner {
+    -webkit-flex: auto;
+    flex: auto;
+    width: 50%;
+}
+

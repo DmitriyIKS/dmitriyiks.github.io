@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 Canvas</title>
+    <style>
+        canvas{
+            border:1px dashed black;
+        }
+    </style>
+    <script>
+            window.onload = function(){
+            var canvas = document.getElementById('drawingCanvas');
+            
+            var context = canvas.getContext('2d');
+            
+            canvas.width=300;
+            canvas.height=300;
+            
+            context.strokeRect(15,15,266,266);
+            context.strokeRect(18,18,260,260);
+            context.fillStyle="green"
+            context.fillRect(20,20,256,256);
+            
+            for (i=0;i<8;i +=2)
+            for (j=0;j<8;j +=2){
+                context.clearRect(20+i*32,20+j*32,32,32);
+                
+                context.clearRect(20+(i+1)*32,20+(j+1)*32,32,32);
+            context.stroke();
+                        
+            }
+            var canvas1 = document.getElementById('drawingCanvas1');
+            var context1 = canvas1.getContext('2d');
+            context1.beginPath();
+            context1.moveTo(10,10);
+            context1.lineTo(100,100);
+            context1.lineTi(150,100);
+            context1.closePath();
+            context1.fill();
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id='drawingCanvas1' width="500" height="300"></canvas>
+    <canvas id='drawingCanvas' width="500" height="300"></canvas>
+</body>
+</html>

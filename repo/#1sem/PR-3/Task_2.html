@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TASK 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt0"> Введите свою дату рождения: <input class="input-in0" id="date1" type="date" value="12.12.2020"> </div>
+        <br>
+
+        <button onclick="dr()" data-text="Посчитать"></button>
+        <div class="put" id="output"></div>
+        <div class="put" id="raz"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
+
+        <script>
+            ///import {  } from 'moment.js';
+            function dr() {
+                
+                var date0 = document.getElementById('date1').value;
+                date0;
+                console.log(date0);
+            ///    let den = date0.getDate();
+            ///    let mes = date0.getMonth();
+            ///    let yer = date0.getFullYear(); 
+
+            ///    var now = new Date();
+            ///    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+                
+            ///    document.getElementById('output')
+            // This is the birthdate we're checking, in ISO 8601 format
+            const birthdate = date0;
+
+            // Get today date in ISO 8601 format
+            const today = moment().format('YYYY-MM-DD');
+
+            // Calculate current age of person in years (moment truncates by default)
+            const years = moment().diff(birthdate, 'years');
+
+            // Special case if birthday is today; we do NOT need an extra year added
+            const adjustToday = birthdate.substring(5) === today.substring(5) ? 0 : 1;
+
+            // Add age plus one year (unless birthday is today) to get next birthday
+            const nextBirthday = moment(birthdate).add(years + adjustToday, 'years');
+
+            // Final calculation in days
+            const daysUntilBirthday = nextBirthday.diff(today, 'days');
+
+            var a = moment(date0);
+            var b = today;
+            
+            document.getElementById('output').innerHTML = `Вы родились ${a.from(b)}, вам до следущего дня рождения ${daysUntilBirthday} дней.`;
+            }
+
+
+        </script>
+
+    </body>
+</html>

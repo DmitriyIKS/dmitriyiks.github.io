@@ -1,0 +1,47 @@
+.block{
+    border: 1px solid blue;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.all{
+    display: flex;
+    justify-content: space-around;
+}
+.color{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+.block1{
+    border: 0;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: whitesmoke;
+}
+.border_red{
+    border: 2px solid rgb(255, 0, 0);
+    outline: 2px solid rgb(255, 0, 0);
+    outline-offset: 15px;
+}
+
+.border_red:after {
+    border: 0px solid #ee0606;
+  }
+.block-1{
+    background-color: red;
+}
+.block-2{
+    background-color: yellow;
+}
+.all2{
+    display: flex;
+    justify-content: space-around;
+}
+.block11{
+    border: 0;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: whitesmoke;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru, en">
+    <head>
+        <title>TASK 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="txt"> <div class="text">
+        <a class="navbar-brand js-scroll" href="index.html">ГЛАВНАЯ СТРАНИЦА</a>
+    <h1>РЕШЕНИЕ ЗАДАЧИ 2</h1>
+    <h2>С экрана пользователя вводиться длинная строка.</h2>
+    <h3>Реализуйте обрезание строки.</h3>
+    <input class="input-in" type="text" size="60" value=""><button onclick="gotovo()">Готово</button><button onclick="chitat()">Читать</button>
+    <p id="rer"></p>
+    </div></div>
+    <script>
+        let m = 9;
+        let inputIn = document.querySelector('.input-in');
+
+        function gotovo() {
+        let str = inputIn.value;
+        if (str.length > 9) {
+        
+            document.getElementById('rer').innerHTML = 'Измененный текст: ' + str.substr(0,m) + '...';
+        } else {
+            document.getElementById('rer').innerHTML = 'Измененный текст: ' + str.substr(0,m);
+        }
+        }
+        function chitat() {
+        let str2 = inputIn.value;
+        document.getElementById('rer').innerHTML = 'Полный текст: ' + str2;
+        }
+    </script>
+    </body>
+</html>

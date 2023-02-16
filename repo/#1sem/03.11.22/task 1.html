@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en, ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Методы массивов</title>
+  <!-- JQuery da Google -->
+  <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+<h1>Решение задачи №1</h1>
+<h2>В гараже стоят машины. Каких машин всего два?</h2>
+<p>uaz, gaz, reno, bmw, subaru, infinity, uaz</p>
+<button onclick="carF()">Узнать</button>
+<p id="cars"></p>
+<script>
+let flowers = ["uaz", "gaz", "reno", "bmw", "subaru", "infinity", "uaz"]
+function carF() {
+const countItems = flowers.reduce((acc, item) => {
+  acc[item] = acc[item] ? acc[item] + 1 : 1;
+  return acc;
+}, {});
+
+const result = Object.keys(countItems).filter((item) => countItems[item] > 1);
+document.getElementById("cars").innerHTML = "Машин в гагрже более двух: " + result;
+
+}
+
+
+
+</script>
+
+</body>
+</html>

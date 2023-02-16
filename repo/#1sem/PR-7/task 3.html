@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en, ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Методы массивов</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+<h1>Решение задачи №3</h1>
+<h2>Заполнить массив случайными значениями до 16</h2>
+<button onclick="numF()">Создать</button>
+<button onclick="numDiff()">Количество элементов между</button>
+<button onclick="numFirst()">Первое простое число</button>
+<button onclick="numLast()">Псоледнее простое число</button>
+<button onclick="numProsto()">Количество простых чисел в массиве</button>
+<p id="p1num"></p>
+<p id="p2num"></p>
+<p id="p3num"></p>
+<p id="p4num"></p>
+<p id="p5num"></p>
+<script>
+let num = [];
+let numP = num;
+function numF() {
+
+var i = 0;
+
+while ( num.length < 16 ) {
+var a = Math.round(Math.random()*100);
+num[i] = a;
+i++;
+document.getElementById("p1num").innerHTML = "Созданный массив: " + num.toString();
+}
+
+}
+
+function numDiff() {
+  let numArr = [...num];
+        var minRes = Math.min(...numArr);
+        var maxRes = Math.max(...numArr);
+        let idx1 = numArr.indexOf(minRes, 0);
+        let idx2 = numArr.indexOf(maxRes, 0);
+        var beetween = null; 
+        if (idx1 > idx2){
+            beetween = idx1 - idx2 - 1;
+        }else{
+            beetween = idx2 - idx1 - 1;
+        }
+  document.getElementById("p2num").innerHTML = "Количество между мин и макс: " + beetween
+}
+
+function numFirst() {
+  for (let j = num.length - 1; j > 0; j--) {
+    for (let i = 0; i < j; i++) {
+      if (numP[i] > numP[i + 1]) {
+        let temp = numP[i];
+        numP[i] = numP[i + 1];
+        numP[i + 1] = temp;
+      }
+    }
+  }
+
+  let arr = [];
+
+  function findPrime(n){
+            if (n===1){
+                return false;
+            }else if(n === 2){
+                return true;
+            }else{
+                for(var x = 2; x < n; x++){
+                    if(n % x === 0){
+                        return false;
+                    }
+                }
+                return true;  
+            }
+        }
+        let primeArr = [];
+        for (var j = 0; j < 16; j++){
+            var prime = findPrime(numP[j]);
+            if (prime == true){
+                primeArr.push(numP[j]);
+            }
+        }
+        console.log(primeArr);
+document.getElementById("p3num").innerHTML = "Первое простое число: " + primeArr[0];
+}
+
+function numLast() {
+  for (let j = num.length - 1; j > 0; j--) {
+    for (let i = 0; i < j; i++) {
+      if (numP[i] > numP[i + 1]) {
+        let temp = numP[i];
+        numP[i] = numP[i + 1];
+        numP[i + 1] = temp;
+      }
+    }
+  }
+
+  let arr = [];
+
+  function findPrime(n){
+            if (n===1){
+                return false;
+            }else if(n === 2){
+                return true;
+            }else{
+                for(var x = 2; x < n; x++){
+                    if(n % x === 0){
+                        return false;
+                    }
+                }
+                return true;  
+            }
+        }
+        let primeArr = [];
+        for (var j = 0; j < 16; j++){
+            var prime = findPrime(numP[j]);
+            if (prime == true){
+                primeArr.push(numP[j]);
+            }
+        }
+        let g = primeArr.length;
+        document.getElementById("p4num").innerHTML = "Последнее простое число: " + primeArr[g-1];
+}
+
+function numProsto() {
+  for (let j = num.length - 1; j > 0; j--) {
+    for (let i = 0; i < j; i++) {
+      if (numP[i] > numP[i + 1]) {
+        let temp = numP[i];
+        numP[i] = numP[i + 1];
+        numP[i + 1] = temp;
+      }
+    }
+  }
+
+  let arr = [];
+
+  function findPrime(n){
+            if (n===1){
+                return false;
+            }else if(n === 2){
+                return true;
+            }else{
+                for(var x = 2; x < n; x++){
+                    if(n % x === 0){
+                        return false;
+                    }
+                }
+                return true;  
+            }
+        }
+        let primeArr = [];
+        for (var j = 0; j < 16; j++){
+            var prime = findPrime(numP[j]);
+            if (prime == true){
+                primeArr.push(numP[j]);
+            }
+        }
+        let g = primeArr.length;
+        document.getElementById("p5num").innerHTML = "Количество простых чисел: " + g;
+}
+</script>
+
+
+</body>
+</html>

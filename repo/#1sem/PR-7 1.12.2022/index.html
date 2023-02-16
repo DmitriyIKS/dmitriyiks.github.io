@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="title"><title>Знаки задиака</title></div>
+    <div><h1>Гороскоп</h1></div>
+    <link rel="stylesheet" href="Style.css">   
+    
+</head>
+<body>
+<!--Слайдер-->
+<ul id="slides">
+    <li class="slide showing">Рак</li>
+    <li class="slide">Скорпион </li>
+    <li class="slide">Стрелец </li>
+    <li class="slide">Дева </li>
+    <li class="slide">Козерог </li>
+    <li class="slide">Лев </li>
+    <li class="slide">Овен </li>
+    <li class="slide">Рыбы </li>
+    <li class="slide">Телец </li>
+    <li class="slide">Весы </li>
+    <li class="slide">Водолей </li>
+    <li class="slide">Близнецы </li>
+</ul>
+
+<!-- Скрипт слайдера-->
+<script type="text/javascript" src="js/script1.js"></script>
+<script> 
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,3000);
+
+    function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+    }    
+</script>
+
+<div id="clearId">
+    
+    
+    <!--первый блок-->
+    <div class="prvblok"><h1>Хотите знать о себе?</h1>
+    <div class="button-group"><button class="button button1" onclick="Open()"></button>   Да   
+    <button class="button button2 right" onclick="End()"></button>   Нет</div></div>
+    
+    <!--второй блок-->
+    <div class="vtrblok" id="vtrBlokId"></div>
+   
+   
+    <!--третий блок-->
+    <div class="trtblok" id="trtBlokId"></div>
+    
+    <!--четвертый блок-->
+    <div class="refresh" id="refreshId"></div>
+</div>
+</body>
+</html> 

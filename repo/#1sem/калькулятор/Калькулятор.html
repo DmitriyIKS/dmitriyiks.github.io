@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+       <meta charset="UTF-8"> 
+       <title>Калькулятор</title> 
+		<link rel="stylesheet" href="stylesheet.css"> 
+
+</head>
+ 
+<body> 
+<h1>Мой калькулятор</h1> 
+<div class="calc_body"> 
+<div id="window_calc"> 0 </div> 
+
+<!-- 1-й ряд --> 
+<div onClick="log('ctrl + L')" class="buttons_calc">log</div> 
+<div onClick="sqrt('ctrl + Y')" class="buttons_calc">√</div> 
+<div onClick="semn('ctrl + 6')" class="buttons_calc">^</div> 
+<div onClick="delOneElement('backspace')" class="buttons_calc">del</div> 
+
+<!-- 2-й ряд --> 
+<div onClick="clic(7)" class="buttons_calc">7</div> 
+<div onClick="clic(8)" class="buttons_calc">8</div> 
+<div onClick="clic(9)" class="buttons_calc">9</div> 
+<div onClick="semn('/')" class="buttons_calc">/</div> 
+
+<!-- 3-й ряд --> 
+<div onClick="clic(4)" class="buttons_calc">4</div> 
+<div onClick="clic(5)" class="buttons_calc">5</div> 
+<div onClick="clic(6)" class="buttons_calc">6</div> 
+<div onClick="semn('*')" class="buttons_calc">*</div> 
+
+<!-- 4-й ряд --> 
+<div onClick="clic(1)" class="buttons_calc">1</div> 
+<div onClick="clic(2)" class="buttons_calc">2</div> 
+<div onClick="clic(3)" class="buttons_calc">3</div> 
+<div onClick="semn('-')" class="buttons_calc">-</div> 
+
+<!-- 5-й ряд --> 
+<div onClick="clic(0)" class="buttons_calc">0</div> 
+<div onClick="semn('+')" class="buttons_calc">+</div> 
+<div onClick="ravno()" class="buttons_calc">=</div> 
+<div onClick="clear1()" class="buttons_calc">C</div> 
+
+</div> 
+<script> 
+document.onkeydown = function checkKeycode(event) { 
+var keycode; 
+if(!event) var event = window.event; 
+if(event.keyCode) keycode = event.keyCode; 
+else if(event.which) keycode = event.which; 
+switch(keycode){ 
+  case 13:ravno();break; 
+  case 46:clear1();break; 
+  case 111:semn('/');break; 
+  case 106:semn('*');break; 
+  case 107:semn('+');break; 
+  case 109:semn('-');break; 
+   
+  case 8:delOneElement('backspace');break; 
+  case 17, 89:sqrt('ctrl + Y');break; 
+  case 17, 54:semn('ctrl + 6');break; 
+  case 17, 76:log('ctrl + L');break; 
+   
+  case 96:clic(0);break; 
+  case 97:clic(1);break; 
+  case 98:clic(2);break; 
+  case 99:clic(3);break; 
+  case 100:clic(4);break; 
+  case 101:clic(5);break; 
+  case 102:clic(6);break; 
+  case 103:clic(7);break; 
+  case 104:clic(8);break; 
+  case 105:clic(9);break; 
+} 
+} 
+var b = 0; // число которому до совершения операций присвается 0
+var k = ''; // отделяет действия (+, -, * и т.д.)
+var znak = false; 
+function clear1(){ 
+document.getElementById("window_calc").innerHTML = 0; 
+b = 0; 
+k =''; 
+znak = false; 
+} 
+function semn(semn){ 
+k = semn; 
+znak = false; 
+b = parseInt(window_calc.innerHTML); 
+}  
+function delOneElement(){ 
+document.getElementById("window_calc").innerHTML = window_calc.innerHTML.slice(0, -1);
+if (window_calc.innerHTML.length < 1){
+    document.getElementById("window_calc").innerHTML = 0;
+}
+}
+function ravno(){ 
+if(k != ''){ 
+  switch(k){ 
+   case '/': b = b / parseInt(window_calc.innerHTML); 
+   break; 
+   case '*': b = b * parseInt(window_calc.innerHTML); 
+   break; 
+   case '-': b = b - parseInt(window_calc.innerHTML); 
+   break; 
+   case '+': b = b + parseInt(window_calc.innerHTML); 
+   break; 
+   case 'ctrl + 6': b = b ** parseInt(window_calc.innerHTML);
+   break;
+  } 
+window_calc.innerHTML = b; 
+k = '';  
+} 
+}  
+function clic(number){ 
+var window_calc = document.getElementById("window_calc"); 
+if(window_calc.innerHTML.length < 22){ 
+  if(window_calc.innerHTML != 0 && znak ==true){ 
+   window_calc.innerHTML += number; 
+  }else{ 
+   window_calc.innerHTML = number; 
+   znak = true; 
+  } 
+} 
+} 
+function sqrt(){
+    document.getElementById("window_calc").innerHTML = Math.sqrt(window_calc.innerHTML)
+}
+function log(){
+    document.getElementById("window_calc").innerHTML = Math.log(window_calc.innerHTML)
+}
+</script>  
+</body> 
+</html>

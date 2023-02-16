@@ -1,0 +1,103 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background: grey;
+  color: blue;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+a {
+  text-decoration: none;
+}
+.calendar-wrapper {
+  width: 360px;
+  margin: 3em auto;
+  padding: 2em;
+  border: 1px solid #dcdcff;
+  border-radius: 5px;
+  background: lightgreen;
+}
+table {
+  clear: both;
+  width: 100%;
+  border: 1px solid #dcdcff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: #444;
+}
+td {
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #dcdcff;
+  border-top: 1px solid #dcdcff;
+  width: 14.28571429%;
+}
+td.not-current {
+  color: black;
+}
+td.today {
+  font-weight: 700;
+  color: red;
+  font-size: 1.5em;
+}
+td.normal, td.yesterday, td.nextday {
+    color: blue;
+}
+thead td {
+  border: none;
+  color: blue;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+#btnPrev {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-bottom: 20px;
+}
+#btnPrev:before {
+  font-family: FontAwesome;
+  padding-right: 4px;
+}
+#btnNext {
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-bottom: 20px;
+}
+#btnNext:after {
+  font-size: 40px;
+  font-family: FontAwesome;
+  padding-left: 4px;
+}
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: blue;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en, ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Методы массивов</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+<h1>Решение задачи №2</h1>
+<h2>Заполнить массив случайными значениями</h2>
+<p>Найти и вывести: Максимум, Минимум, Ср. арифметическое</p>
+<button onclick="numF()">Создать</button>
+<button onclick="numMax()">Максимум</button>
+<button onclick="numMin()">Минимум</button>
+<button onclick="numSr()">Ср</button>
+<p id="p1num"></p>
+<p id="p2num"></p>
+<p id="p3num"></p>
+<p id="p4num"></p>
+<script>
+var num = [];
+
+function numF() {
+
+var i = 0;
+
+while ( num.length<=30 ) {
+var a = Math.floor(Math.random() * (99 - 1 + 1) ) + 1;
+
+if (a % 2 == 0) {
+num[i] = a;
+i++;
+}
+
+document.getElementById("p1num").innerHTML = "Нами созданный чтеный массив: " + num.toString();
+}
+
+}
+
+function numMax() {
+  document.getElementById("p2num").innerHTML = "Максимальное число в массиве: " + Math.max.apply(null, num);
+}
+
+function numMin() {
+  document.getElementById("p3num").innerHTML = "Минимальное число в массиве: " + Math.min.apply(null, num);
+}
+
+function numSr() {
+
+  const getAverage = (num) => {
+  const sum = num.reduce((acc, num) => acc + num, 0);
+  const length = num.length;
+  return sum / length;
+}
+
+document.getElementById("p4num").innerHTML = "Среднее арифметическое массива: " + Math.round(getAverage(num));
+}
+</script>
+
+
+</body>
+</html>

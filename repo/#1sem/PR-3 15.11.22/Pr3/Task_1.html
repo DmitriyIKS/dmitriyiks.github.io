@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TASK 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="txt0"> Первая дата: <input class="input-in0" id="date1" type="date" value="12.12.2020"> </div>
+        <br>
+        <div class="txt1"> Вторая дата: <input class="input-in1" id="date2" type="date" value="12.12.2021"> </div>
+        <br>
+        <button onclick="diff()" data-text="Сравнить"></button>
+        <div class="put" id="output"></div>
+        <div class="put" id="raz"></div>
+        <script>
+            function diff() {
+                let err0 = document.getElementById('date1').value;
+                let err1 = document.getElementById('date2').value;
+                var date0 = new Date(document.getElementById('date1').value);
+                var date1 = new Date(document.getElementById('date2').value);
+                if (err0 < err1) {
+                    var razn = new Date(date1 - date0);
+                    document.getElementById("output").innerHTML = "Первая дата меньше второй: " + date0.getFullYear() + "-" + date0.getMonth() + "-" + date0.getDate() + " < " +
+                    date1.getFullYear() + "-" + date1.getMonth() + "-" + date1.getDate();
+                    document.getElementById("raz").innerHTML = "На " + (razn.getDate()-1) + " день " + razn.getMonth() + " месяц " + (razn.getFullYear()-1970) + " год";
+                    
+                } else if (err0  > err1) {
+                    var razn = new Date(date0 - date1);
+                    document.getElementById("output").innerHTML = "Первая дата больше второй: " + date0.getFullYear() + "-" + date0.getMonth() + "-" + date0.getDate() + " > " +
+                    date1.getFullYear() + "-" + date1.getMonth() + "-" + date1.getDate();
+                    document.getElementById("raz").innerHTML = "На " + (razn.getDate() - 1) + " день " + razn.getMonth() + " месяц " + (razn.getFullYear() - 1970) + " год";
+                } else if (err0 = err1) {
+                    document.getElementById("output").innerHTML = "Первая дата равна второй: " + date0.getFullYear() + "-" + date0.getMonth() + "-" + date0.getDate() + " = " +
+                    date1.getFullYear() + "-" + date1.getMonth() + "-" + date1.getDate();
+                    document.getElementById("raz").innerHTML = "На " + 0 + " день " + 0 + " месяц " + 0 + " год";
+                } else {
+                    document.getElementById("output").innerHTML = "Даты введены некоректно";
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
